@@ -466,7 +466,7 @@ func JoinNamespaceAndProcessInfoWithOptions(pid string, descriptors []string, op
 // JoinNamespaceAndProcessInfoByPidsWithOptions has similar semantics to
 // JoinNamespaceAndProcessInfo and avoids duplicate entries by joining a giving
 // PID namespace only once.
-func JoinNamespaceAndProcessInfoByPidsWithOptions(pids []string, descriptors []string, options *JoinNamespaceOpts) ([][]string, error) {
+func JoinNamespaceAndProcessInfoByPidsWithOptions(pids, descriptors []string, options *JoinNamespaceOpts) ([][]string, error) {
 	// Extracting data from processes that share the same PID namespace
 	// would yield duplicate results.  Avoid that by extracting data only
 	// from the first process in `pids` from a given PID namespace.
@@ -512,7 +512,7 @@ func JoinNamespaceAndProcessInfoByPidsWithOptions(pids []string, descriptors []s
 // JoinNamespaceAndProcessInfoByPids has similar semantics to
 // JoinNamespaceAndProcessInfo and avoids duplicate entries by joining a giving
 // PID namespace only once.
-func JoinNamespaceAndProcessInfoByPids(pids []string, descriptors []string) ([][]string, error) {
+func JoinNamespaceAndProcessInfoByPids(pids, descriptors []string) ([][]string, error) {
 	return JoinNamespaceAndProcessInfoByPidsWithOptions(pids, descriptors, &JoinNamespaceOpts{})
 }
 
@@ -533,7 +533,7 @@ func ProcessInfo(descriptors []string) ([][]string, error) {
 
 // ProcessInfoByPids is like ProcessInfo, but the process information returned
 // is limited to a list of user specified PIDs.
-func ProcessInfoByPids(pids []string, descriptors []string) ([][]string, error) {
+func ProcessInfoByPids(pids, descriptors []string) ([][]string, error) {
 	aixDescriptors, err := translateDescriptors(descriptors)
 	if err != nil {
 		return nil, err
