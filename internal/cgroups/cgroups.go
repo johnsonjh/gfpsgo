@@ -31,7 +31,8 @@ var (
 	isUnifiedErr  error
 )
 
-// IsCgroup2UnifiedMode returns whether we are running in cgroup or cgroupv2 mode.
+// IsCgroup2UnifiedMode returns whether we are running in cgroup or cgroupv2
+// mode.
 func IsCgroup2UnifiedMode() (bool, error) {
 	isUnifiedOnce.Do(func() {
 		var st syscall.Statfs_t

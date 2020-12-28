@@ -59,7 +59,8 @@ func LookupGID(gid string) (string, error) {
 	return g.Name, nil
 }
 
-// LookupUID return the textual user ID, if it can be obtained, or the decimal
+// LookupUID return the textual user ID, if it can be obtained, or the
+// decimal
 // representation otherwise.
 func LookupUID(uid string) (string, error) {
 	uidNum, err := strconv.Atoi(uid)
@@ -210,7 +211,7 @@ func (p *Process) StartTime() (time.Time, error) {
 		return time.Time{}, err
 	}
 
-	sinceBoot = sinceBoot / clockTicks
+	sinceBoot /= clockTicks
 	return time.Unix(sinceBoot+bootTime, 0), nil
 }
 

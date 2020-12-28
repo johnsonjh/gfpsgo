@@ -12,7 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// Package capabilities provides a mapping from common kernel bit masks to the
+// Package capabilities provides a mapping from common kernel bit masks to
+// the
 // alphanumerical representation of kernel capabilities.  See capabilities(7)
 // for additional information.
 package capabilities
@@ -71,8 +72,10 @@ var (
 )
 
 // TranslateMask iterates over mask and returns a slice of corresponding
-// capabilities.  If a bit is out of range of known capabilities, it is set as
-// "unknown" to catch potential regressions when new capabilities are added to
+// capabilities.  If a bit is out of range of known capabilities, it is set
+// as
+// "unknown" to catch potential regressions when new capabilities are added
+// to
 // the kernel.
 func TranslateMask(mask uint64) []string {
 	caps := []string{}

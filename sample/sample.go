@@ -18,11 +18,31 @@ func main() {
 		data        [][]string
 		err         error
 
-		pids         = flag.String("pids", "", "comma separated list of process IDs to retrieve")
-		format       = flag.String("format", "", "ps(1) AIX format comma-separated string")
-		list         = flag.Bool("list", false, "list all supported descriptors")
-		join         = flag.Bool("join", false, "join namespace of provided pids (containers)")
-		fillMappings = flag.Bool("fill-mappings", false, "fill the UID and GID mappings with the current user namespace")
+		pids = flag.String(
+			"pids",
+			"",
+			"comma separated list of process IDs to retrieve",
+		)
+		format = flag.String(
+			"format",
+			"",
+			"ps(1) AIX format comma-separated string",
+		)
+		list = flag.Bool(
+			"list",
+			false,
+			"list all supported descriptors",
+		)
+		join = flag.Bool(
+			"join",
+			false,
+			"join namespace of provided pids (containers)",
+		)
+		fillMappings = flag.Bool(
+			"fill-mappings",
+			false,
+			"fill the UID and GID mappings with the current user namespace",
+		)
 	)
 
 	flag.Parse()
@@ -49,7 +69,11 @@ func main() {
 		opts := psgo.JoinNamespaceOpts{FillMappings: *fillMappings}
 
 		if *join {
-			data, err = psgo.JoinNamespaceAndProcessInfoByPidsWithOptions(pidsList, descriptors, &opts)
+			data, err = psgo.JoinNamespaceAndProcessInfoByPidsWithOptions(
+				pidsList,
+				descriptors,
+				&opts,
+			)
 		} else {
 			data, err = psgo.ProcessInfoByPids(pidsList, descriptors)
 		}
@@ -67,5 +91,8 @@ func main() {
 	for _, d := range data {
 		fmt.Fprintln(tw, strings.Join(d, "\t"))
 	}
-	tw.Flush()
+	err = tw.Flush()
+	if err != nil {
+		logrus.Panic(err)
+	}
 }

@@ -24,7 +24,8 @@ import (
 	"github.com/pkg/errors"
 )
 
-// Status is a direct translation of a `/proc/[pid]/status`, which provides much
+// Status is a direct translation of a `/proc/[pid]/status`, which provides
+// much
 // of the information in /proc/[pid]/stat and /proc/[pid]/statm in a format
 // that's easier for humans to parse.
 type Status struct {
@@ -45,7 +46,8 @@ type Status struct {
 	Pid string
 	// PPid: PID of parent process.
 	PPid string
-	// TracerPid: PID of process tracing this process (0 if not being traced).
+	// TracerPid: PID of process tracing this process (0 if not being
+	// traced).
 	TracerPid string
 	// Uids: Real, effective, saved set, and filesystem.
 	Uids []string
@@ -121,7 +123,8 @@ type Status struct {
 	// queued signals for this process (see the  description  of
 	// RLIMIT_SIGPENDING  in  getr- limit(2)).
 	SigQ string
-	// SigPnd:  Number  of signals pending for thread and for (see pthreads(7)).
+	// SigPnd:  Number  of signals pending for thread and for (see
+	// pthreads(7)).
 	SigPnd string
 	// ShdPnd:  Number  of signals pending for process as a whole (see
 	// signal(7)).
@@ -130,7 +133,7 @@ type Status struct {
 	SigBlk string
 	//  SigIgn: Mask indicating signals being ignored (see signal(7)).
 	SigIgn string
-	//  SigCgt: Mask indicating signals being  blocked caught (see signal(7)).
+	// SigCgt: Mask indicating signals being  blocked caught (see signal(7)).
 	SigCgt string
 	// CapInh:  Mask of capabilities enabled in inheritable sets (see
 	// capabilities(7)).
@@ -175,7 +178,8 @@ type Status struct {
 	NonvoluntaryCtxtSwitches string
 }
 
-// readStatusUserNS joins the user namespace of pid and returns the content of
+// readStatusUserNS joins the user namespace of pid and returns the content
+// of
 // /proc/pid/status as a string slice.
 func readStatusUserNS(pid string) ([]string, error) {
 	path := fmt.Sprintf("/proc/%s/status", pid)
@@ -184,13 +188,18 @@ func readStatusUserNS(pid string) ([]string, error) {
 	c := exec.Command(args[0], args[1:]...)
 	output, err := c.CombinedOutput()
 	if err != nil {
-		return nil, fmt.Errorf("error executing %q: %v", strings.Join(args, " "), err)
+		return nil, fmt.Errorf(
+			"error executing %q: %v",
+			strings.Join(args, " "),
+			err,
+		)
 	}
 
 	return strings.Split(string(output), "\n"), nil
 }
 
-// readStatusDefault returns the content of /proc/pid/status as a string slice.
+// readStatusDefault returns the content of /proc/pid/status as a string
+// slice.
 func readStatusDefault(pid string) ([]string, error) {
 	path := fmt.Sprintf("/proc/%s/status", pid)
 	f, err := os.Open(path)
@@ -225,7 +234,10 @@ func ParseStatus(pid string, joinUserNS bool) (*Status, error) {
 // parseStatus extracts data from lines and returns a *Status.
 func parseStatus(pid string, lines []string) (*Status, error) {
 	s := Status{}
-	errUnexpectedInput := fmt.Errorf("unexpected input from /proc/%s/status", pid)
+	errUnexpectedInput := fmt.Errorf(
+		"unexpected input from /proc/%s/status",
+		pid,
+	)
 	for _, line := range lines {
 		fields := strings.Fields(line)
 		if len(fields) < 2 {

@@ -12,7 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// Package host extracts data from the host, such as the system's boot time or
+// Package host extracts data from the host, such as the system's boot time
+// or
 // the tick rate of the system clock.
 package host
 
@@ -54,7 +55,10 @@ func BootTime() (int64, error) {
 
 	btimeSec, err := strconv.ParseInt(btimeStr, 10, 64)
 	if err != nil {
-		return 0, fmt.Errorf("error parsing boot time from /proc/stat: %s", err)
+		return 0, fmt.Errorf(
+			"error parsing boot time from /proc/stat: %s",
+			err,
+		)
 	}
 	bootTime = &btimeSec
 	return btimeSec, nil

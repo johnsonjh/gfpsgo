@@ -59,12 +59,12 @@ func FindTTY(ttyNr uint64, devices *[]TTY) (*TTY, error) {
 
 // majDevNum returns the major device number of rdev (see stat_t.Rdev).
 func majDevNum(rdev uint64) uint64 {
-	return (rdev >> 8) & 0xfff
+	return (rdev >> 8) & 0xFFF
 }
 
 // minDevNum returns the minor device number of rdev (see stat_t.Rdev).
 func minDevNum(rdev uint64) uint64 {
-	return (rdev & 0xff) | ((rdev >> 12) & 0xfff00)
+	return (rdev & 0xFF) | ((rdev >> 12) & 0xFFF00)
 }
 
 // TTYs parses /dev for tty and pts devices.

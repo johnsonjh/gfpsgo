@@ -12,14 +12,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// Package psgo is a ps (1) AIX-format compatible golang library extended with
+// Package psgo is a ps (1) AIX-format compatible golang library extended
+// with
 // various descriptors useful for displaying container-related data.
 //
 // The idea behind the library is to provide an easy to use way of extracting
-// process-related data, just as ps (1) does. The problem when using ps (1) is
-// that the ps format strings split columns with whitespaces, making the output
-// nearly impossible to parse. It also adds some jitter as we have to fork and
-// execute ps either in the container or filter the output afterwards, further
+// process-related data, just as ps (1) does. The problem when using ps (1)
+// is
+// that the ps format strings split columns with whitespaces, making the
+// output
+// nearly impossible to parse. It also adds some jitter as we have to fork
+// and
+// execute ps either in the container or filter the output afterwards,
+// further
 // limiting applicability.
 //
 // Please visit https://github.com/containers/psgo for further details about
@@ -55,7 +60,8 @@ type IDMap struct {
 	Size int
 }
 
-// JoinNamespaceOpts specifies different options for joining the specified namespaces.
+// JoinNamespaceOpts specifies different options for joining the specified
+// namespaces.
 type JoinNamespaceOpts struct {
 	// UIDMap specifies a mapping for UIDs in the container.  If specified
 	// huser will perform the reverse mapping.
@@ -72,7 +78,8 @@ type JoinNamespaceOpts struct {
 type psContext struct {
 	// Processes in the container.
 	containersProcesses []*process.Process
-	// Processes on the host.  Used to map those to the ones running in the container.
+	// Processes on the host.  Used to map those to the ones running in the
+	// container.
 	hostProcesses []*process.Process
 	// tty and pty devices.
 	ttys *[]dev.TTY
@@ -85,8 +92,10 @@ type psContext struct {
 type processFunc func(*process.Process, *psContext) (string, error)
 
 // aixFormatDescriptor as mentioned in the ps(1) manpage.  A given descriptor
-// can either be specified via its code (e.g., "%C") or its normal representation
-// (e.g., "pcpu") and will be printed under its corresponding header (e.g, "%CPU").
+// can either be specified via its code (e.g., "%C") or its normal
+// representation
+// (e.g., "pcpu") and will be printed under its corresponding header (e.g,
+// "%CPU").
 type aixFormatDescriptor struct {
 	// code descriptor in the short form (e.g., "%C").
 	code string
@@ -102,7 +111,12 @@ type aixFormatDescriptor struct {
 }
 
 // findID converts the specified id to the host mapping
-func findID(idStr string, mapping []IDMap, lookupFunc func(uid string) (string, error), overflowFile string) (string, error) {
+func findID(
+	idStr string,
+	mapping []IDMap,
+	lookupFunc func(uid string) (string, error),
+	overflowFile string,
+) (string, error) {
 	if len(mapping) == 0 {
 		return idStr, nil
 	}
@@ -127,11 +141,15 @@ func findID(idStr string, mapping []IDMap, lookupFunc func(uid string) (string, 
 	return string(overflow), nil
 }
 
-// translateDescriptors parses the descriptors and returns a correspodning slice of
-// aixFormatDescriptors.  Descriptors can be specified in the normal and in the
+// translateDescriptors parses the descriptors and returns a correspodning
+// slice of
+// aixFormatDescriptors.  Descriptors can be specified in the normal and in
+// the
 // code form (if supported).  If the descriptors slice is empty, the
 // `DefaultDescriptors` is used.
-func translateDescriptors(descriptors []string) ([]aixFormatDescriptor, error) {
+func translateDescriptors(
+	descriptors []string,
+) ([]aixFormatDescriptor, error) {
 	if len(descriptors) == 0 {
 		descriptors = DefaultDescriptors
 	}
@@ -156,7 +174,16 @@ func translateDescriptors(descriptors []string) ([]aixFormatDescriptor, error) {
 
 var (
 	// DefaultDescriptors is the `ps -ef` compatible default format.
-	DefaultDescriptors = []string{"user", "pid", "ppid", "pcpu", "etime", "tty", "time", "args"}
+	DefaultDescriptors = []string{
+		"user",
+		"pid",
+		"ppid",
+		"pcpu",
+		"etime",
+		"tty",
+		"time",
+		"args",
+	}
 
 	// ErrUnknownDescriptor is returned when an unknown descriptor is parsed.
 	ErrUnknownDescriptor = errors.New("unknown descriptor")
@@ -333,10 +360,19 @@ func ListDescriptors() (list []string) {
 	return
 }
 
-// JoinNamespaceAndProcessInfo has the same semantics as ProcessInfo but joins
-// the mount namespace of the specified pid before extracting data from `/proc`.
-func JoinNamespaceAndProcessInfo(pid string, descriptors []string) ([][]string, error) {
-	return JoinNamespaceAndProcessInfoWithOptions(pid, descriptors, &JoinNamespaceOpts{})
+// JoinNamespaceAndProcessInfo has the same semantics as ProcessInfo but
+// joins
+// the mount namespace of the specified pid before extracting data from
+// `/proc`.
+func JoinNamespaceAndProcessInfo(
+	pid string,
+	descriptors []string,
+) ([][]string, error) {
+	return JoinNamespaceAndProcessInfoWithOptions(
+		pid,
+		descriptors,
+		&JoinNamespaceOpts{},
+	)
 }
 
 // ReadMappings ...
@@ -347,7 +383,11 @@ func ReadMappings(path string) ([]IDMap, error) {
 	}
 	var res []IDMap
 	for _, i := range mappings {
-		m := IDMap{ContainerID: i.ContainerID, HostID: i.HostID, Size: i.Size}
+		m := IDMap{
+			ContainerID: i.ContainerID,
+			HostID:      i.HostID,
+			Size:        i.Size,
+		}
 		res = append(res, m)
 	}
 	return res, nil
@@ -374,9 +414,15 @@ func contextFromOptions(options *JoinNamespaceOpts) (*psContext, error) {
 	return ctx, nil
 }
 
-// JoinNamespaceAndProcessInfoWithOptions has the same semantics as ProcessInfo but joins
-// the mount namespace of the specified pid before extracting data from `/proc`.
-func JoinNamespaceAndProcessInfoWithOptions(pid string, descriptors []string, options *JoinNamespaceOpts) ([][]string, error) {
+// JoinNamespaceAndProcessInfoWithOptions has the same semantics as
+// ProcessInfo but joins
+// the mount namespace of the specified pid before extracting data from
+// `/proc`.
+func JoinNamespaceAndProcessInfoWithOptions(
+	pid string,
+	descriptors []string,
+	options *JoinNamespaceOpts,
+) ([][]string, error) {
 	var (
 		data    [][]string
 		dataErr error
@@ -419,7 +465,11 @@ func JoinNamespaceAndProcessInfoWithOptions(pid string, descriptors []string, op
 
 		pidUserNs, err := proc.ParseUserNamespace(pid)
 		if err != nil {
-			dataErr = errors.Wrapf(err, "error determining user namespace of PID %s", pid)
+			dataErr = errors.Wrapf(
+				err,
+				"error determining user namespace of PID %s",
+				pid,
+			)
 		}
 
 		// join the mount namespace of pid
@@ -465,9 +515,13 @@ func JoinNamespaceAndProcessInfoWithOptions(pid string, descriptors []string, op
 }
 
 // JoinNamespaceAndProcessInfoByPidsWithOptions has similar semantics to
-// JoinNamespaceAndProcessInfo and avoids duplicate entries by joining a giving
+// JoinNamespaceAndProcessInfo and avoids duplicate entries by joining a
+// giving
 // PID namespace only once.
-func JoinNamespaceAndProcessInfoByPidsWithOptions(pids, descriptors []string, options *JoinNamespaceOpts) ([][]string, error) {
+func JoinNamespaceAndProcessInfoByPidsWithOptions(
+	pids, descriptors []string,
+	options *JoinNamespaceOpts,
+) ([][]string, error) {
 	// Extracting data from processes that share the same PID namespace
 	// would yield duplicate results.  Avoid that by extracting data only
 	// from the first process in `pids` from a given PID namespace.
@@ -493,7 +547,11 @@ func JoinNamespaceAndProcessInfoByPidsWithOptions(pids, descriptors []string, op
 
 	data := [][]string{}
 	for i, pid := range pidList {
-		pidData, err := JoinNamespaceAndProcessInfoWithOptions(pid, descriptors, options)
+		pidData, err := JoinNamespaceAndProcessInfoWithOptions(
+			pid,
+			descriptors,
+			options,
+		)
 		if os.IsNotExist(errors.Cause(err)) {
 			// catch race conditions
 			continue
@@ -511,18 +569,27 @@ func JoinNamespaceAndProcessInfoByPidsWithOptions(pids, descriptors []string, op
 }
 
 // JoinNamespaceAndProcessInfoByPids has similar semantics to
-// JoinNamespaceAndProcessInfo and avoids duplicate entries by joining a giving
+// JoinNamespaceAndProcessInfo and avoids duplicate entries by joining a
+// giving
 // PID namespace only once.
-func JoinNamespaceAndProcessInfoByPids(pids, descriptors []string) ([][]string, error) {
-	return JoinNamespaceAndProcessInfoByPidsWithOptions(pids, descriptors, &JoinNamespaceOpts{})
+func JoinNamespaceAndProcessInfoByPids(
+	pids, descriptors []string,
+) ([][]string, error) {
+	return JoinNamespaceAndProcessInfoByPidsWithOptions(
+		pids,
+		descriptors,
+		&JoinNamespaceOpts{},
+	)
 }
 
-// ProcessInfo returns the process information of all processes in the current
+// ProcessInfo returns the process information of all processes in the
+// current
 // mount namespace. The input format must be a comma-separated list of
 // supported AIX format descriptors.  If the input string is empty, the
 // `DefaultDescriptors` is used.
 // The return value is an array of tab-separated strings, to easily use the
-// output for column-based formatting (e.g., with the `text/tabwriter` package).
+// output for column-based formatting (e.g., with the `text/tabwriter`
+// package).
 func ProcessInfo(descriptors []string) ([][]string, error) {
 	pids, err := proc.GetPIDs()
 	if err != nil {
@@ -532,7 +599,8 @@ func ProcessInfo(descriptors []string) ([][]string, error) {
 	return ProcessInfoByPids(pids, descriptors)
 }
 
-// ProcessInfoByPids is like ProcessInfo, but the process information returned
+// ProcessInfoByPids is like ProcessInfo, but the process information
+// returned
 // is limited to a list of user specified PIDs.
 func ProcessInfoByPids(pids, descriptors []string) ([][]string, error) {
 	aixDescriptors, err := translateDescriptors(descriptors)
@@ -577,7 +645,10 @@ func hostProcesses(pid string) ([]*process.Process, error) {
 
 // processDescriptors calls each `procFn` of all formatDescriptors on each
 // process and returns an array of tab-separated strings.
-func processDescriptors(formatDescriptors []aixFormatDescriptor, ctx *psContext) ([][]string, error) {
+func processDescriptors(
+	formatDescriptors []aixFormatDescriptor,
+	ctx *psContext,
+) ([][]string, error) {
 	data := [][]string{}
 	// create header
 	header := []string{}
@@ -623,38 +694,38 @@ func findHostProcess(p *process.Process, ctx *psContext) *process.Process {
 // processGROUP returns the effective group ID of the process.  This will be
 // the textual group ID, if it can be optained, or a decimal representation
 // otherwise.
-func processGROUP(p *process.Process, ctx *psContext) (string, error) {
+func processGROUP(p *process.Process, _ *psContext) (string, error) {
 	return process.LookupGID(p.Status.Gids[1])
 }
 
 // processRGROUP returns the real group ID of the process.  This will be
 // the textual group ID, if it can be optained, or a decimal representation
 // otherwise.
-func processRGROUP(p *process.Process, ctx *psContext) (string, error) {
+func processRGROUP(p *process.Process, _ *psContext) (string, error) {
 	return process.LookupGID(p.Status.Gids[0])
 }
 
 // processPPID returns the parent process ID of process p.
-func processPPID(p *process.Process, ctx *psContext) (string, error) {
+func processPPID(p *process.Process, _ *psContext) (string, error) {
 	return p.Status.PPid, nil
 }
 
 // processUSER returns the effective user name of the process.  This will be
 // the textual user ID, if it can be optained, or a decimal representation
 // otherwise.
-func processUSER(p *process.Process, ctx *psContext) (string, error) {
+func processUSER(p *process.Process, _ *psContext) (string, error) {
 	return process.LookupUID(p.Status.Uids[1])
 }
 
 // processRUSER returns the effective user name of the process.  This will be
 // the textual user ID, if it can be optained, or a decimal representation
 // otherwise.
-func processRUSER(p *process.Process, ctx *psContext) (string, error) {
+func processRUSER(p *process.Process, _ *psContext) (string, error) {
 	return process.LookupUID(p.Status.Uids[0])
 }
 
 // processName returns the name of process p in the format "[$name]".
-func processName(p *process.Process, ctx *psContext) (string, error) {
+func processName(p *process.Process, _ *psContext) (string, error) {
 	return fmt.Sprintf("[%s]", p.Status.Name), nil
 }
 
@@ -668,28 +739,28 @@ func processARGS(p *process.Process, ctx *psContext) (string, error) {
 }
 
 // processCOMM returns the command name (i.e., executable name) of process p.
-func processCOMM(p *process.Process, ctx *psContext) (string, error) {
+func processCOMM(p *process.Process, _ *psContext) (string, error) {
 	return p.Stat.Comm, nil
 }
 
 // processNICE returns the nice value of process p.
-func processNICE(p *process.Process, ctx *psContext) (string, error) {
+func processNICE(p *process.Process, _ *psContext) (string, error) {
 	return p.Stat.Nice, nil
 }
 
 // processPID returns the process ID of process p.
-func processPID(p *process.Process, ctx *psContext) (string, error) {
+func processPID(p *process.Process, _ *psContext) (string, error) {
 	return p.Pid, nil
 }
 
 // processPGID returns the process group ID of process p.
-func processPGID(p *process.Process, ctx *psContext) (string, error) {
+func processPGID(p *process.Process, _ *psContext) (string, error) {
 	return p.Stat.Pgrp, nil
 }
 
 // processPCPU returns how many percent of the CPU time process p uses as
 // a three digit float as string.
-func processPCPU(p *process.Process, ctx *psContext) (string, error) {
+func processPCPU(p *process.Process, _ *psContext) (string, error) {
 	elapsed, err := p.ElapsedTime()
 	if err != nil {
 		return "", err
@@ -704,7 +775,7 @@ func processPCPU(p *process.Process, ctx *psContext) (string, error) {
 }
 
 // processETIME returns the elapsed time since the process was started.
-func processETIME(p *process.Process, ctx *psContext) (string, error) {
+func processETIME(p *process.Process, _ *psContext) (string, error) {
 	elapsed, err := p.ElapsedTime()
 	if err != nil {
 		return "", nil
@@ -713,7 +784,7 @@ func processETIME(p *process.Process, ctx *psContext) (string, error) {
 }
 
 // processTIME returns the cumulative CPU time of process p.
-func processTIME(p *process.Process, ctx *psContext) (string, error) {
+func processTIME(p *process.Process, _ *psContext) (string, error) {
 	cpu, err := p.CPUTime()
 	if err != nil {
 		return "", err
@@ -722,7 +793,7 @@ func processTIME(p *process.Process, ctx *psContext) (string, error) {
 }
 
 // processStartTime returns the start time of process p.
-func processStartTime(p *process.Process, ctx *psContext) (string, error) {
+func processStartTime(p *process.Process, _ *psContext) (string, error) {
 	sTime, err := p.StartTime()
 	if err != nil {
 		return "", err
@@ -751,7 +822,7 @@ func processTTY(p *process.Process, ctx *psContext) (string, error) {
 
 // processVSZ returns the virtual memory size of process p in KiB (1024-byte
 // units).
-func processVSZ(p *process.Process, ctx *psContext) (string, error) {
+func processVSZ(p *process.Process, _ *psContext) (string, error) {
 	vmsize, err := strconv.Atoi(p.Stat.Vsize)
 	if err != nil {
 		return "", err
@@ -781,41 +852,41 @@ func parseCAP(cap string) (string, error) {
 // processCAPAMB returns the set of ambient capabilities associated with
 // process p.  If all capabilities are set, "full" is returned.  If no
 // capability is enabled, "none" is returned.
-func processCAPAMB(p *process.Process, ctx *psContext) (string, error) {
+func processCAPAMB(p *process.Process, _ *psContext) (string, error) {
 	return parseCAP(p.Status.CapAmb)
 }
 
 // processCAPINH returns the set of inheritable capabilities associated with
 // process p.  If all capabilities are set, "full" is returned.  If no
 // capability is enabled, "none" is returned.
-func processCAPINH(p *process.Process, ctx *psContext) (string, error) {
+func processCAPINH(p *process.Process, _ *psContext) (string, error) {
 	return parseCAP(p.Status.CapInh)
 }
 
 // processCAPPRM returns the set of permitted capabilities associated with
 // process p.  If all capabilities are set, "full" is returned.  If no
 // capability is enabled, "none" is returned.
-func processCAPPRM(p *process.Process, ctx *psContext) (string, error) {
+func processCAPPRM(p *process.Process, _ *psContext) (string, error) {
 	return parseCAP(p.Status.CapPrm)
 }
 
 // processCAPEFF returns the set of effective capabilities associated with
 // process p.  If all capabilities are set, "full" is returned.  If no
 // capability is enabled, "none" is returned.
-func processCAPEFF(p *process.Process, ctx *psContext) (string, error) {
+func processCAPEFF(p *process.Process, _ *psContext) (string, error) {
 	return parseCAP(p.Status.CapEff)
 }
 
 // processCAPBND returns the set of bounding capabilities associated with
 // process p.  If all capabilities are set, "full" is returned.  If no
 // capability is enabled, "none" is returned.
-func processCAPBND(p *process.Process, ctx *psContext) (string, error) {
+func processCAPBND(p *process.Process, _ *psContext) (string, error) {
 	return parseCAP(p.Status.CapBnd)
 }
 
 // processSECCOMP returns the seccomp mode of the process (i.e., disabled,
 // strict or filter) or "?" if /proc/$pid/status.seccomp has a unknown value.
-func processSECCOMP(p *process.Process, ctx *psContext) (string, error) {
+func processSECCOMP(p *process.Process, _ *psContext) (string, error) {
 	switch p.Status.Seccomp {
 	case "0":
 		return "disabled", nil
@@ -830,7 +901,7 @@ func processSECCOMP(p *process.Process, ctx *psContext) (string, error) {
 
 // processLABEL returns the process label of process p or "?" if the system
 // doesn't support labeling.
-func processLABEL(p *process.Process, ctx *psContext) (string, error) {
+func processLABEL(p *process.Process, _ *psContext) (string, error) {
 	return p.Label, nil
 }
 
@@ -843,12 +914,18 @@ func processHPID(p *process.Process, ctx *psContext) (string, error) {
 	return "?", nil
 }
 
-// processHUSER returns the effective user ID of the corresponding host process
+// processHUSER returns the effective user ID of the corresponding host
+// process
 // of the (container) or "?" if no corresponding process could be found.
 func processHUSER(p *process.Process, ctx *psContext) (string, error) {
 	if hp := findHostProcess(p, ctx); hp != nil {
 		if ctx.opts != nil && len(ctx.opts.UIDMap) > 0 {
-			return findID(hp.Status.Uids[1], ctx.opts.UIDMap, process.LookupUID, "/proc/sys/fs/overflowuid")
+			return findID(
+				hp.Status.Uids[1],
+				ctx.opts.UIDMap,
+				process.LookupUID,
+				"/proc/sys/fs/overflowuid",
+			)
 		}
 		return hp.Huser, nil
 	}
@@ -861,7 +938,12 @@ func processHUSER(p *process.Process, ctx *psContext) (string, error) {
 func processHGROUP(p *process.Process, ctx *psContext) (string, error) {
 	if hp := findHostProcess(p, ctx); hp != nil {
 		if ctx.opts != nil && len(ctx.opts.GIDMap) > 0 {
-			return findID(hp.Status.Gids[1], ctx.opts.GIDMap, process.LookupGID, "/proc/sys/fs/overflowgid")
+			return findID(
+				hp.Status.Gids[1],
+				ctx.opts.GIDMap,
+				process.LookupGID,
+				"/proc/sys/fs/overflowgid",
+			)
 		}
 		return hp.Hgroup, nil
 	}
@@ -870,7 +952,7 @@ func processHGROUP(p *process.Process, ctx *psContext) (string, error) {
 
 // processRSS returns the resident set size of process p in KiB (1024-byte
 // units).
-func processRSS(p *process.Process, ctx *psContext) (string, error) {
+func processRSS(p *process.Process, _ *psContext) (string, error) {
 	if p.Status.VMRSS == "" {
 		// probably a kernel thread
 		return "0", nil
@@ -879,6 +961,6 @@ func processRSS(p *process.Process, ctx *psContext) (string, error) {
 }
 
 // processState returns the process state of process p.
-func processState(p *process.Process, ctx *psContext) (string, error) {
+func processState(p *process.Process, _ *psContext) (string, error) {
 	return p.Status.State, nil
 }

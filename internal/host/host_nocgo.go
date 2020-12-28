@@ -14,7 +14,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// Package host extracts data from the host, such as the system's boot time or
+// Package host extracts data from the host, such as the system's boot time
+// or
 // the tick rate of the system clock.
 package host
 

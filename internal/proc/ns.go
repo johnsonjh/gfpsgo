@@ -75,6 +75,9 @@ func ReadMappings(path string) ([]IDMap, error) {
 		if _, err := fmt.Sscanf(string(line), "%d %d %d", &containerID, &hostID, &size); err != nil {
 			return nil, errors.Wrapf(err, "cannot parse %s", string(line))
 		}
-		mappings = append(mappings, IDMap{ContainerID: containerID, HostID: hostID, Size: size})
+		mappings = append(
+			mappings,
+			IDMap{ContainerID: containerID, HostID: hostID, Size: size},
+		)
 	}
 }
