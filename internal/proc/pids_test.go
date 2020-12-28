@@ -18,9 +18,11 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	u "go.gridfinity.dev/leaktestfe"
 )
 
 func TestGetPIDs(t *testing.T) {
+	u.Leakplug(t)
 	// no thorough test but it makes sure things are working
 	pids, err := GetPIDs()
 	assert.Nil(t, err)
@@ -28,6 +30,7 @@ func TestGetPIDs(t *testing.T) {
 }
 
 func TestGetPIDSFromCgroup(t *testing.T) {
+	u.Leakplug(t)
 	// no thorough test but it makes sure things are working
 	pids, err := GetPIDsFromCgroup("self")
 	assert.Nil(t, err)

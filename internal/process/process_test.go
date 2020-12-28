@@ -18,9 +18,11 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	u "go.gridfinity.dev/leaktestfe"
 )
 
 func TestAll(t *testing.T) {
+	u.Leakplug(t)
 	// no thorough test but it makes sure things are working
 	p, err := New("self", false)
 	assert.Nil(t, err)

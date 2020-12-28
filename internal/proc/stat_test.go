@@ -19,6 +19,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	u "go.gridfinity.dev/leaktestfe"
 )
 
 var (
@@ -40,6 +41,7 @@ func testReadStat(file string) (string, error) {
 }
 
 func TestParseStat(t *testing.T) {
+	u.Leakplug(t)
 	readStat = testReadStat
 
 	s, err := ParseStat("31404")

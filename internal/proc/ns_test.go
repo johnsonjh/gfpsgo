@@ -18,9 +18,11 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	u "go.gridfinity.dev/leaktestfe"
 )
 
 func TestParsePIDNamespace(t *testing.T) {
+	u.Leakplug(t)
 	// no thorough test but it makes sure things are working
 	pidNS, err := ParsePIDNamespace("self")
 	assert.Nil(t, err)
@@ -28,6 +30,7 @@ func TestParsePIDNamespace(t *testing.T) {
 }
 
 func TestParseUserNamespace(t *testing.T) {
+	u.Leakplug(t)
 	// no thorough test but it makes sure things are working
 	userNS, err := ParseUserNamespace("self")
 	assert.Nil(t, err)

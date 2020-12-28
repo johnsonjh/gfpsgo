@@ -18,9 +18,11 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	u "go.gridfinity.dev/leaktestfe"
 )
 
 func TestParseAttrCurrent(t *testing.T) {
+	u.Leakplug(t)
 	// no thorough test but it makes sure things are working
 	_, err := ParseAttrCurrent("self")
 	assert.Nil(t, err)

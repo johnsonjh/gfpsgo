@@ -18,9 +18,11 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	u "go.gridfinity.dev/leaktestfe"
 )
 
 func TestGetTTYs(t *testing.T) {
+	u.Leakplug(t)
 	// no thorough test but it makes sure things are working
 	devs, err := TTYs()
 	assert.Nil(t, err)

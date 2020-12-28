@@ -18,9 +18,11 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	u "go.gridfinity.dev/leaktestfe"
 )
 
 func TestClockTicks(t *testing.T) {
+	u.Leakplug(t)
 	// no thorough test but it makes sure things are working
 	ticks, err := ClockTicks()
 	assert.Nil(t, err)
@@ -28,6 +30,7 @@ func TestClockTicks(t *testing.T) {
 }
 
 func TestBootTime(t *testing.T) {
+	u.Leakplug(t)
 	// no thorough test but it makes sure things are working
 	btime, err := BootTime()
 	assert.Nil(t, err)

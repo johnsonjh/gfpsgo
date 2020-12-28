@@ -20,9 +20,11 @@ import (
 	"github.com/containers/psgo/internal/proc"
 	"github.com/containers/psgo/internal/process"
 	"github.com/stretchr/testify/assert"
+	u "go.gridfinity.dev/leaktestfe"
 )
 
 func TestProcessARGS(t *testing.T) {
+	u.Leakplug(t)
 	p := process.Process{
 		Status: proc.Status{
 			Name: "foo-bar",
@@ -45,6 +47,7 @@ func TestProcessARGS(t *testing.T) {
 }
 
 func TestProcessCOMM(t *testing.T) {
+	u.Leakplug(t)
 	p := process.Process{
 		Stat: proc.Stat{
 			Comm: "foo-bar",

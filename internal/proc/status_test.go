@@ -19,6 +19,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	u "go.gridfinity.dev/leaktestfe"
 )
 
 // copied from proc(5) manpage
@@ -79,6 +80,7 @@ nonvoluntary_ctxt_switches:     545
 `
 
 func TestParseStatus(t *testing.T) {
+	u.Leakplug(t)
 	s, err := parseStatus("testpid", strings.Split(statusFile, "\n"))
 
 	assert.Nil(t, err)
