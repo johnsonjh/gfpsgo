@@ -339,7 +339,8 @@ func JoinNamespaceAndProcessInfo(pid string, descriptors []string) ([][]string, 
 	return JoinNamespaceAndProcessInfoWithOptions(pid, descriptors, &JoinNamespaceOpts{})
 }
 
-func readMappings(path string) ([]IDMap, error) {
+// ReadMappings ...
+func ReadMappings(path string) ([]IDMap, error) {
 	mappings, err := proc.ReadMappings(path)
 	if err != nil {
 		return nil, err
@@ -356,12 +357,12 @@ func contextFromOptions(options *JoinNamespaceOpts) (*psContext, error) {
 	ctx := new(psContext)
 	ctx.opts = options
 	if ctx.opts != nil && ctx.opts.FillMappings {
-		uidMappings, err := readMappings("/proc/self/uid_map")
+		uidMappings, err := ReadMappings("/proc/self/uid_map")
 		if err != nil {
 			return nil, err
 		}
 
-		gidMappings, err := readMappings("/proc/self/gid_map")
+		gidMappings, err := ReadMappings("/proc/self/gid_map")
 		if err != nil {
 			return nil, err
 		}

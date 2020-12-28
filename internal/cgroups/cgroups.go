@@ -20,6 +20,7 @@ import (
 )
 
 const (
+	// CgroupRoot ...
 	CgroupRoot        = "/sys/fs/cgroup"
 	cgroup2SuperMagic = 0x63677270
 )

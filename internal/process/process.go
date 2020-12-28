@@ -195,7 +195,7 @@ func (p *Process) ElapsedTime() (time.Duration, error) {
 	return time.Since(startTime), nil
 }
 
-// StarTime returns the time.Time when process p was started.
+// StartTime returns the time.Time when process p was started.
 func (p *Process) StartTime() (time.Time, error) {
 	sinceBoot, err := strconv.ParseInt(p.Stat.Starttime, 10, 64)
 	if err != nil {

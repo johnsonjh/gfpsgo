@@ -23,6 +23,7 @@ import (
 	"github.com/pkg/errors"
 )
 
+// IDMap ...
 type IDMap struct {
 	ContainerID int
 	HostID      int
