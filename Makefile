@@ -12,7 +12,9 @@ GO_BUILD=$(GO) build -v -a
 
 GOBIN ?= $(GO)/bin
 
-all: build compress
+all:
+	@printf %s\\n "See \"help\" for more information."
+help:
 
 .PHONY: compress
 compress:
@@ -27,29 +29,34 @@ compress:
 	@printf %s\\n "Testing compressed $(BUILD_DIR)/$(NAME)..."
 	@${UPX} -qq -t $(BUILD_DIR)/$(NAME) && printf %s\\n "OK!" || printf %s\\n "Error: Compression failure."
 
+.PHONY: help
+help:
+	@printf %s\\n "Targets: help, clean, build, compress, test, check, install, uninstall"
+
 .PHONY: build
 build: $(GO_SRC)
-	 CGO_ENABLED=1 GO111MODULES=on $(GO_BUILD) -tags="static_build,osnetgo" -trimpath -o $(BUILD_DIR)/$(NAME) -ldflags='-w -s -buildid= -linkmode=internal'  $(PROJECT)/sample
+	 @CGO_ENABLED=1 GO111MODULES=on $(GO_BUILD) -tags="static_build,osnetgo" -trimpath -o $(BUILD_DIR)/$(NAME) -ldflags='-w -s -buildid= -linkmode=internal'  $(PROJECT)/sample
 
 .PHONY: clean
 clean:
-	rm -rf $(BUILD_DIR)
+	@rm -rf $(BUILD_DIR)
 
 .PHONY: test
-test: test-unit test-integration
+test:
+	@printf %s\\n "Run \"make bats-test\" for integration tests, or \"make go-test\" for unit tests."
 
-.PHONY: test-integration
-test-integration:
-	bats test/$(BATS_TESTS)
+.PHONY: bats-test
+bats-test: 
+	@bats test/$(BATS_TESTS)
 
-.PHONY: test-unit
-test-unit:
-	GOMAXPROCS=128 go test -cpu=12 -parallel=1 -count=1 -v -race -tags=leaktest -cover -covermode=atomic -bench=. "./..."
+.PHONY: go-test
+go-test: 
+	@GOMAXPROCS=128 $(GO) test -cpu=12 -parallel=2 -count=2 -v -race -tags=leaktest -cover -covermode=atomic -bench=. "./..."
 
 .PHONY: install
 install:
-	sudo install -D -m755 $(BUILD_DIR)/$(NAME) $(BIN_DIR)
+	@sudo install -D -m755 $(BUILD_DIR)/$(NAME) $(BIN_DIR)
 
 .PHONY: uninstall
 uninstall:
-	sudo rm $(BIN_DIR)/$(NAME)
+	@sudo rm $(BIN_DIR)/$(NAME)
