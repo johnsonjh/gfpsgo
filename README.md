@@ -1,4 +1,36 @@
-# psgo
+# gfpsgo
+
+## Availability
+
+### Go Modiles
+
+* [go.gridfinity.dev](https://go.gridfinity.dev/gfpsgo)
+* [go.gridfinity.com](https://go.gridfinity.com)
+
+### Source Code
+
+* [Gridfinity GitLab](https://gitlab.gridfinity.com/go/gfpsgo)
+* [SourceHut](https://sr.ht/~trn/gfpsgo)
+* [GitHub](https://github.com/gridfinity/gfpsgo)
+
+### Issue Tracking
+
+* [Gridfinity GitLab Issues](https://gitlab.gridfinity.com/go/gfpsgo/-/issues)
+
+## Code of Conduct
+
+* Apparently, we inherit the [*Containers Community Code of Conduct*](https://github.com/containers/common/blob/master/CODE-OF-CONDUCT.md)
+  from the `psgo` project.  However, Gridfinity will ***NOT*** enforce this
+  Code of Conduct. We recommend any user of the this software fork to have 
+  **no interaction** with the greater "*Containers Community*". If you do, you
+  should expect them to exercise their Code of Conduct in whatever arbitrary
+  way they deem appropriate, with no recourse, and likely minimal oversight.
+
+## Security Policy
+
+* We **do not** follow the *Containers Community Security Policy* in any way.
+  Please review our [Security Policy and Vulnerability Reporting](https://gitlab.gridfinity.com/go/gfpsgo/-/blob/master/SECURITY.md)
+  details, and **do not** bother the upstream maintainers - or their community.
 
 ## Overview
 
@@ -103,3 +135,7 @@ PID     USER         GROUP        SECCOMP
 4       root         root         disabled
 6       root         root         disabled
 ```
+## License
+
+* This software is provided under [The Apache 2.0 Software License](https://gitlab.gridfinity.com/go/gfpsgo/-/blob/master/LICENSE).
+
