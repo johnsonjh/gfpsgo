@@ -3,6 +3,7 @@ module go.gridfinity.dev/gfpsgo
 go 1.14
 
 require (
+	github.com/containers/psgo v1.5.2-0.20201223021038-5156ec800ab6
 	github.com/opencontainers/runc v1.0.0-rc92.0.20201222164114-5efdc0c5a42d
 	github.com/pkg/errors v0.9.2-0.20201214064552-5dd12d0cfe7f
 	github.com/sirupsen/logrus v1.7.1-0.20201217161852-cd4bf4ef8de1

@@ -29,7 +29,7 @@ compress:
 
 .PHONY: build
 build: $(GO_SRC)
-	 CGO_ENABLED=1 GO111MODULES=on $(GO_BUILD) -tags="static_build,osnetgo" -trimpath -o $(BUILD_DIR)/$(NAME) -ldflags='-spectre -w -s -buildid= -linkmode=internal'  $(PROJECT)/sample
+	 CGO_ENABLED=1 GO111MODULES=on $(GO_BUILD) -tags="static_build,osnetgo" -trimpath -o $(BUILD_DIR)/$(NAME) -ldflags='-w -s -buildid= -linkmode=internal'  $(PROJECT)/sample
 
 .PHONY: clean
 clean:
