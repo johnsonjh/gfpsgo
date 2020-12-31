@@ -1,4 +1,6 @@
-// Copyright 2018 psgo authors
+// Copyright 2018 psgo authors.
+// Copyright 2020 Gridfinity, LLC.
+// Copyright 2020 Jeffrey H. Johnson.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,23 +15,18 @@
 // limitations under the License.
 
 // Package psgo is a ps (1) AIX-format compatible golang library extended
-// with
-// various descriptors useful for displaying container-related data.
+// with various descriptors useful for displaying container-related data.
 //
 // The idea behind the library is to provide an easy to use way of extracting
 // process-related data, just as ps (1) does. The problem when using ps (1)
-// is
-// that the ps format strings split columns with whitespaces, making the
-// output
-// nearly impossible to parse. It also adds some jitter as we have to fork
-// and
-// execute ps either in the container or filter the output afterwards,
-// further
-// limiting applicability.
+// is that the ps format strings split columns with whitespaces, making the
+// output nearly impossible to parse. It also adds some jitter as we have to
+// fork and execute ps either in the container or filter the output
+// afterwards, further limiting applicability.
 //
 // Please visit https://github.com/containers/psgo for further details about
 // supported format descriptors and to see some usage examples.
-package psgo
+package gfpsgo // import "go.gridfinity.dev/gfpsgo"
 
 import (
 	"fmt"
@@ -41,11 +38,11 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/containers/psgo/internal/capabilities"
-	"github.com/containers/psgo/internal/dev"
-	"github.com/containers/psgo/internal/proc"
-	"github.com/containers/psgo/internal/process"
 	"github.com/pkg/errors"
+	"go.gridfinity.dev/gfpsgo/internal/capabilities"
+	"go.gridfinity.dev/gfpsgo/internal/dev"
+	"go.gridfinity.dev/gfpsgo/internal/proc"
+	"go.gridfinity.dev/gfpsgo/internal/process"
 	"golang.org/x/sys/unix"
 )
 

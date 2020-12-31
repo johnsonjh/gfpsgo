@@ -19,10 +19,10 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/containers/psgo/internal/host"
-	"github.com/containers/psgo/internal/proc"
 	"github.com/opencontainers/runc/libcontainer/user"
 	"github.com/pkg/errors"
+	"go.gridfinity.dev/gfpsgo/internal/host"
+	"go.gridfinity.dev/gfpsgo/internal/proc"
 )
 
 // Process includes process-related from the /proc FS.

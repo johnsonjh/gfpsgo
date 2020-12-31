@@ -7,7 +7,6 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"github.com/containers/psgo"
 	"github.com/sirupsen/logrus"
 )
 

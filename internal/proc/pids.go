@@ -22,7 +22,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/containers/psgo/internal/cgroups"
+	"go.gridfinity.dev/gfpsgo/internal/cgroups"
 )
 
 // GetPIDs extracts and returns all PIDs from /proc.
