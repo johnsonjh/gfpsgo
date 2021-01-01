@@ -2,7 +2,7 @@
 
 ## Availability
 
-### Go Modiles
+### Go Modules
 
 * [go.gridfinity.dev](https://go.gridfinity.dev/gfpsgo)
 * [go.gridfinity.com](https://go.gridfinity.com)

@@ -47,32 +47,6 @@ default:
     git --no-pager diff --full-index --exit-code
 ###################### End Common Blocks
 
-###################### Begin Windows Build + Test
-windows job:
-    tags:
-    - Windows-x86_64
-    stage: all
-    script: 
-    - *scriptCommon
-    - $env:Path += ";C:\Program Files\Git\cmd;C:\Go\bin"
-    - $env:GO111MODULE="on"
-    - $env:GOPROXY="https://proxy.golang.org,direct"
-    - $env:CGO_ENABLED="0"
-    - *scriptGoVersion
-    - go clean -modcache -cache -r
-    - *scriptGitPre
-    - go build -v -a -trimpath .\...
-    - cd cmd
-    - go build -v -a -o gfpsgo -trimpath .\...
-    - cd ..
-    - | 
-        # status
-        echo "Build completed successfully - running tests; coverage and race detector enabled"
-        echo "TODO: Find out how to execute Makefiles in PowerShell"
-    - $env:CGO_ENABLED="1"
-    - go test -v -cover -covermode="atomic" -race -count="1" -cpu="1" -bench="." -parallel="1" .\...
-###################### End Windows Build + Test
-
 ###################### Begin Linux
 linux job:
     tags:
