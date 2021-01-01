@@ -1,4 +1,4 @@
-package main
+package main // import "go.gridfinity.dev/cmd/gfpsgo"
 
 import (
 	"flag"
