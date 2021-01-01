@@ -31,9 +31,9 @@
 ## Security Policy
 
 * We **do not** follow the *Containers Community Security Policy* in any way.
-  Please review our own [Security Policy and Vulnerability Reporting](https://gitlab.gridfinity.com/go/gfpsgo/-/blob/master/SECURITY.md) document for details.
-  **DO NOT** bother the upstream maintainers, or their community, for matters
-  regarding this version of the software.
+  Please review our Gridfinity-specific [Security Policy and Vulnerability Reporting](https://gitlab.gridfinity.com/go/gfpsgo/-/blob/master/SECURITY.md)
+  document for all details. **DO NOT** bother the upstream maintainers, or
+  their community, for matters regarding this version of the software.
 
 ## Overview
 
