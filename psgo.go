@@ -475,6 +475,12 @@ func JoinNamespaceAndProcessInfoWithOptions(
 		}
 		defer fd.Close()
 
+		// Bail on OS X here!
+		// XXX(jhj): Crashes on Unshare/CLONE_NEWNS.
+		if runtime.GOOS == "darwin" {
+			return
+		}
+
 		// create a new mountns on the current thread
 		if err = unix.Unshare(unix.CLONE_NEWNS); err != nil {
 			dataErr = err
