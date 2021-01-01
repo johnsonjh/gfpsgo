@@ -76,9 +76,5 @@ linux job:
     - *scriptGoVersion
     - go clean -modcache -cache -r || true :;
     - *scriptGitPre
-    - export GO=`which go` && gmake build
-    - | 
-        # status
-        echo "Build completed successfully - running tests"
-    - export GO=`which go` && gmake go-test
+    - export GO=`which go` && gmake build && printf %s\\n "It built!"
 ###################### End Linux Build + Test
