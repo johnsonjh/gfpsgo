@@ -1,4 +1,4 @@
-# gfpsgo
+# gfpsgo for Linux
 
 ## Availability
 
