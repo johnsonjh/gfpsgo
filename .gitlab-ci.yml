@@ -44,7 +44,7 @@ default:
     git --no-pager update-index -q --refresh --really-refresh
     git --no-pager for-each-ref --count=1
     git --no-pager reset --hard
-    git --no-pager diff --full-index --ignore-cr-at-eol --exit-code
+    git --no-pager diff --full-index --exit-code
 ###################### End Common Blocks
 
 ###################### Begin Windows Build + Test
@@ -63,16 +63,16 @@ windows job:
     - go mod download
     - go mod verify
     - *scriptGitPre
-    - go build -v -a -tags="osnetgo" -trimpath .\...
+    - go build -v -a -trimpath .\...
     - cd cmd
-    - go build -v -a -o gfpsgo -tags="osnetgo" -trimpath .\...
+    - go build -v -a -o gfpsgo -trimpath .\...
     - cd ..
     - | 
         # status
         echo "Build completed successfully - running tests; coverage and race detector enabled"
         echo "TODO: Find out how to execute Makefiles in PowerShell"
     - $env:CGO_ENABLED="1"
-    - go test -v -cover -covermode="atomic" -race -tags="osnetgo,leaktest,purego" -count="1" -cpu="1" -bench="." -parallel="1" .\...
+    - go test -v -cover -covermode="atomic" -race -count="1" -cpu="1" -bench="." -parallel="1" .\...
 ###################### End Windows Build + Test
 
 ###################### Begin Linux
@@ -106,11 +106,11 @@ linux job:
     - go mod download
     - go mod verify
     - *scriptGitPre
-    - gmake build
+    - export GO=`which go` && gmake gmake build
     - | 
         # status
-        echo "Build completed successfully - running tests; coverage and race detector enabled"
-    - gmake go-test
+        echo "Build completed successfully - running tests"
+    - export GO=`which go` && gmake go-test
 ###################### End Linux Build + Test
 
 ###################### Begin macOS Build + Test
@@ -140,11 +140,11 @@ macos job:
     - go mod download
     - go mod verify
     - *scriptGitPre
-    - gmake build
+    - export GO=`which go` && gmake build
     - | 
         # status
-        echo "Build completed successfully - running tests; coverage and race detector enabled"
-    - gmake go-test
+        echo "Build completed successfully - running tests"
+    - GO=`which go` && gmake go-test
     - | 
         # cleaning up
     - chmod -R u+rwx "${GOPATH:?}"/* 2>/dev/null && rm -rf -- "${GOPATH:?}"/* 2>/dev/null || true :;
