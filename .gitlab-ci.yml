@@ -102,7 +102,7 @@ linux job:
     - *scriptGoVersion
     - go clean -modcache -cache -r || true :;
     - *scriptGitPre
-    - export GO=`which go` && gmake gmake build
+    - export GO=`which go` && gmake build
     - | 
         # status
         echo "Build completed successfully - running tests"
