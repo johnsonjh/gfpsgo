@@ -4,7 +4,7 @@ GO ?= go
 BUILD_DIR := ./bin
 BIN_DIR := /usr/local/bin
 NAME := gfpsgo
-PROJECT := github.com/containers/psgo
+PROJECT := go.gridfinity.dev/gfpsgo
 BATS_TESTS := *.bats
 GO_SRC=$(shell find . -name "*.go" | grep -v "_test.go")
 

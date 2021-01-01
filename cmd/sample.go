@@ -7,7 +7,7 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"github.com/containers/psgo"
+	"go.gridfinity.dev/gfpsgo"
 	"github.com/sirupsen/logrus"
 )
 

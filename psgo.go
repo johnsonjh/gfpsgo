@@ -24,8 +24,6 @@
 // fork and execute ps either in the container or filter the output
 // afterwards, further limiting applicability.
 //
-// Please visit https://github.com/containers/psgo for further details about
-// supported format descriptors and to see some usage examples.
 package gfpsgo // import "go.gridfinity.dev/gfpsgo"
 
 import (
