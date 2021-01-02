@@ -7,8 +7,8 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	psgo "go.gridfinity.dev/gfpsgo"
 	"github.com/sirupsen/logrus"
+	psgo "go.gridfinity.dev/gfpsgo"
 )
 
 func main() {

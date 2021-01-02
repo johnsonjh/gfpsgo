@@ -4,33 +4,33 @@
 
 ### Go Modules
 
-* [go.gridfinity.dev](https://go.gridfinity.dev/gfpsgo)
-* [go.gridfinity.com](https://go.gridfinity.com)
+- [go.gridfinity.dev](https://go.gridfinity.dev/gfpsgo)
+- [go.gridfinity.com](https://go.gridfinity.com)
 
 ### Source Code
 
-* [Gridfinity GitLab](https://gitlab.gridfinity.com/go/gfpsgo)
-* [SourceHut](https://sr.ht/~trn/gfpsgo)
-* [GitHub](https://github.com/gridfinity/gfpsgo)
+- [Gridfinity GitLab](https://gitlab.gridfinity.com/go/gfpsgo)
+- [SourceHut](https://sr.ht/~trn/gfpsgo)
+- [GitHub](https://github.com/gridfinity/gfpsgo)
 
 ### Issue Tracking
 
-* [Gridfinity GitLab Issues](https://gitlab.gridfinity.com/go/gfpsgo/-/issues)
+- [Gridfinity GitLab Issues](https://gitlab.gridfinity.com/go/gfpsgo/-/issues)
 
 ## Code of Conduct
 
-* While we "inherit" the [*Containers Community Code of Conduct*](https://github.com/containers/common/blob/master/CODE-OF-CONDUCT.md)
-  from the upstream `psgo` project, Gridfinity will ***NOT*** enforce this
+- While we "inherit" the [_Containers Community Code of Conduct_](https://github.com/containers/common/blob/master/CODE-OF-CONDUCT.md)
+  from the upstream `psgo` project, Gridfinity will **_NOT_** enforce this
   Code of Conduct. We furthermore recommend that any users of the this version
-  of the software have **no interaction** with the greater 
-  "*Containers Community*". If you decide to ignore this advice, you must 
+  of the software have **no interaction** with the greater
+  "_Containers Community_". If you decide to ignore this advice, you must
   expect that community to exercise their authority as they see fit per the
-  Code of Conduct, and in any way they deem appropriate. Gridfinity will *NOT*
+  Code of Conduct, and in any way they deem appropriate. Gridfinity will _NOT_
   intervene or offer any assistance or intervene in any upstream disputes.
 
 ## Security Policy
 
-* We **do not** follow the *Containers Community Security Policy* in any way.
+- We **do not** follow the _Containers Community Security Policy_ in any way.
   Please review our Gridfinity-specific [Security Policy and Vulnerability Reporting](https://gitlab.gridfinity.com/go/gfpsgo/-/blob/master/SECURITY.md)
   document for all details. **DO NOT** bother the upstream maintainers, or
   their community, for matters regarding this version of the software.
@@ -41,7 +41,7 @@
 with various descriptors useful for displaying container-related data.
 
 The idea behind the library is to provide an easy to use way of extracting
-process-related data, just as `ps`(`1`) tool does. The problem with using 
+process-related data, just as `ps`(`1`) tool does. The problem with using
 `ps`(`1`) is that the `ps` output is formatted strings split into columns by
 whitespace, which makes the output extremely impossible to automatically parse.
 It also adds some jitter as we have to fork and execute `ps`, either in the
@@ -49,39 +49,42 @@ container, or filter the output afterwards, which further limits usability.
 
 This tool and library is intended to make things more comfortable, especially
 for container runtimes. An API allows joining the mount namespace of a given
-process, and will parse `/proc` and `/dev/` filesystems automatically. 
+process, and will parse `/proc` and `/dev/` filesystems automatically.
 
 The API consists of the following functions:
 
 - `gfpsgo.ProcessInfo(descriptors []string) ([][]string, error)`
 
   - ProcessInfo returns the process information of all processes in the
-  currently mount namespace. The input descriptors must be a slice of
-  supported AIX format descriptors in the normal form or in the code form,
-  if supported. If the input descriptor slice is empty, the
-  `gfpsgo.DefaultDescriptors` are used. The return value contain string slices
-  of process data, one per process.
+    currently mount namespace. The input descriptors must be a slice of
+    supported AIX format descriptors in the normal form or in the code form,
+    if supported. If the input descriptor slice is empty, the
+    `gfpsgo.DefaultDescriptors` are used. The return value contain string slices
+    of process data, one per process.
 
 - `gfpsgo.ProcessInfoByPids(pids []string, descriptors []string) ([][]string, error)`
+
   - ProcessInfoByPids is similar to `psgo.ProcessInfo`, but limits the return
-  value to a list of specified PIDs. The PIDs input must be a slice of PIDs for
-  which process information should be returned. If the input descriptor slice
-  is empty, only the format descriptor headers are returned.
+    value to a list of specified PIDs. The PIDs input must be a slice of PIDs for
+    which process information should be returned. If the input descriptor slice
+    is empty, only the format descriptor headers are returned.
 
 - `psgo.JoinNamespaceAndProcessInfo(pid string, descriptors []string) ([][]string, error)`
-  - JoinNamespaceAndProcessInfo has the same semantics as ProcessInfo but joins the mount namespace of the specified pid before extracting data from /proc.  This way, we can extract the `/proc` data from a container without executing any command inside the container.
+
+  - JoinNamespaceAndProcessInfo has the same semantics as ProcessInfo but joins the mount namespace of the specified pid before extracting data from /proc. This way, we can extract the `/proc` data from a container without executing any command inside the container.
 
 - `psgo.JoinNamespaceAndProcessInfoByPids(pids []string, descriptors []string) ([][]string, error)`
+
   - JoinNamespaceAndProcessInfoByPids is similar to
-  `gfpsgo.JoinNamespaceAndProcessInfo` but takes a slice of PIDs as an
-  argument. To avoid duplicate entries, such as when two or more containers
-  share the same PID namespace, a given PID namespace will be joined only once.
+    `gfpsgo.JoinNamespaceAndProcessInfo` but takes a slice of PIDs as an
+    argument. To avoid duplicate entries, such as when two or more containers
+    share the same PID namespace, a given PID namespace will be joined only once.
 
 - `psgo.ListDescriptors() []string`
-  - ListDescriptors returns a sorted string slice of all supported 
-  AIX-formatted descriptors in their normal form (for example, "args, comm, 
-  user", etc.) It can be useful in the context of shell completion, help
-  messages, etc.
+  - ListDescriptors returns a sorted string slice of all supported
+    AIX-formatted descriptors in their normal form (for example, "args, comm,
+    user", etc.) It can be useful in the context of shell completion, help
+    messages, etc.
 
 ## Listing all processes
 
@@ -141,42 +144,53 @@ by the IBM AIX `ps`(`1`) command-line utility. (On any AIX system, execute
 be useful when seeking specific process-related information.
 
 - **capamb**
+
   - Set of ambient capabilities. See capabilities(7) for more information.
 
 - **capbnd**
+
   - Set of bounding capabilities. See capabilities(7) for more information.
 
 - **capeff**
+
   - Set of effective capabilities. See capabilities(7) for more information.
 
 - **capinh**
+
   - Set of inheritable capabilities. See capabilities(7) for more information.
 
 - **capprm**
+
   - Set of permitted capabilities. See capabilities(7) for more information.
 
 - **hgroup**
+
   - The corresponding effective group of a container process on the host.
 
 - **hpid**
+
   - The corresponding host PID of a container process.
 
 - **huser**
+
   - The corresponding effective user of a container process on the host.
 
 - **label**
+
   - Current security attributes of the process.
 
 - **seccomp**
+
   - Seccomp mode of the process (disabled, strict, filter).
     - See `seccomp`(`2`) for more information.
 
 - **state**
-  - Process state codes (**R** for *running*, **S** for *sleeping*). 
+
+  - Process state codes (**R** for _running_, **S** for _sleeping_).
     - See `proc`(`5`) for more information.
 
 - **stime**
-  - Process start time (such as *"2019-12-09 10:50:36 +0100 CET"*).
+  - Process start time (such as _"2019-12-09 10:50:36 +0100 CET"_).
 
 We can try out different format descriptors with the `gfpsgo` tool:
 
@@ -191,5 +205,4 @@ PID     USER         GROUP        SECCOMP
 
 ## License
 
-* This software is provided under [The Apache 2.0 Software License](https://gitlab.gridfinity.com/go/gfpsgo/-/blob/master/LICENSE).
-
+- This software is provided under [The Apache 2.0 Software License](https://gitlab.gridfinity.com/go/gfpsgo/-/blob/master/LICENSE).
