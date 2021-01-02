@@ -19,21 +19,23 @@
 
 ## Code of Conduct
 
-- While we "inherit" the [_Containers Community Code of Conduct_](https://github.com/containers/common/blob/master/CODE-OF-CONDUCT.md)
-  from the upstream `psgo` project, Gridfinity will **_NOT_** enforce this
-  Code of Conduct. We furthermore recommend that any users of the this version
-  of the software have **no interaction** with the greater
-  "_Containers Community_". If you decide to ignore this advice, you must
-  expect that community to exercise their authority as they see fit per the
-  Code of Conduct, and in any way they deem appropriate. Gridfinity will _NOT_
-  intervene or offer any assistance or intervene in any upstream disputes.
+- While we "inherit" the
+  [_Containers Community Code of Conduct_](https://github.com/containers/common/blob/master/CODE-OF-CONDUCT.md)
+  from the upstream `psgo` project, Gridfinity will **_NOT_** enforce this Code
+  of Conduct. We furthermore recommend that any users of the this version of the
+  software have **no interaction** with the greater "_Containers Community_". If
+  you decide to ignore this advice, you must expect that community to exercise
+  their authority as they see fit per the Code of Conduct, and in any way they
+  deem appropriate. Gridfinity will _NOT_ intervene or offer any assistance or
+  intervene in any upstream disputes.
 
 ## Security Policy
 
 - We **do not** follow the _Containers Community Security Policy_ in any way.
-  Please review our Gridfinity-specific [Security Policy and Vulnerability Reporting](https://gitlab.gridfinity.com/go/gfpsgo/-/blob/master/SECURITY.md)
-  document for all details. **DO NOT** bother the upstream maintainers, or
-  their community, for matters regarding this version of the software.
+  Please review our Gridfinity-specific
+  [Security Policy and Vulnerability Reporting](https://gitlab.gridfinity.com/go/gfpsgo/-/blob/master/SECURITY.md)
+  document for all details. **DO NOT** bother the upstream maintainers, or their
+  community, for matters regarding this version of the software.
 
 ## Overview
 
@@ -57,42 +59,45 @@ The API consists of the following functions:
 
   - ProcessInfo returns the process information of all processes in the
     currently mount namespace. The input descriptors must be a slice of
-    supported AIX format descriptors in the normal form or in the code form,
-    if supported. If the input descriptor slice is empty, the
+    supported AIX format descriptors in the normal form or in the code form, if
+    supported. If the input descriptor slice is empty, the
     `gfpsgo.DefaultDescriptors` are used. The return value contain string slices
     of process data, one per process.
 
 - `gfpsgo.ProcessInfoByPids(pids []string, descriptors []string) ([][]string, error)`
 
   - ProcessInfoByPids is similar to `psgo.ProcessInfo`, but limits the return
-    value to a list of specified PIDs. The PIDs input must be a slice of PIDs for
-    which process information should be returned. If the input descriptor slice
-    is empty, only the format descriptor headers are returned.
+    value to a list of specified PIDs. The PIDs input must be a slice of PIDs
+    for which process information should be returned. If the input descriptor
+    slice is empty, only the format descriptor headers are returned.
 
 - `psgo.JoinNamespaceAndProcessInfo(pid string, descriptors []string) ([][]string, error)`
 
-  - JoinNamespaceAndProcessInfo has the same semantics as ProcessInfo but joins the mount namespace of the specified pid before extracting data from /proc. This way, we can extract the `/proc` data from a container without executing any command inside the container.
+  - JoinNamespaceAndProcessInfo has the same semantics as ProcessInfo but joins
+    the mount namespace of the specified pid before extracting data from /proc.
+    This way, we can extract the `/proc` data from a container without executing
+    any command inside the container.
 
 - `psgo.JoinNamespaceAndProcessInfoByPids(pids []string, descriptors []string) ([][]string, error)`
 
   - JoinNamespaceAndProcessInfoByPids is similar to
     `gfpsgo.JoinNamespaceAndProcessInfo` but takes a slice of PIDs as an
     argument. To avoid duplicate entries, such as when two or more containers
-    share the same PID namespace, a given PID namespace will be joined only once.
+    share the same PID namespace, a given PID namespace will be joined only
+    once.
 
 - `psgo.ListDescriptors() []string`
-  - ListDescriptors returns a sorted string slice of all supported
-    AIX-formatted descriptors in their normal form (for example, "args, comm,
-    user", etc.) It can be useful in the context of shell completion, help
-    messages, etc.
+  - ListDescriptors returns a sorted string slice of all supported AIX-formatted
+    descriptors in their normal form (for example, "args, comm, user", etc.) It
+    can be useful in the context of shell completion, help messages, etc.
 
 ## Listing all processes
 
 We can use the `gfpsgo` tool included with the project to test the core
-components of the library. First, build `gfpsgo` via `make build`. The binary
-is now located under `./bin/gfpsgo`. By default `gfpsgo` displays data about
-all running processes in the currently mount namespace, similar to the output
-of `ps -ef`.
+components of the library. First, build `gfpsgo` via `make build`. The binary is
+now located under `./bin/gfpsgo`. By default `gfpsgo` displays data about all
+running processes in the currently mount namespace, similar to the output of
+`ps -ef`.
 
 ```shell
 $ ./bin/psgo | head -n 5
@@ -121,8 +126,8 @@ root   25843   25840   0.000   102h56m4.196072027s    pts/6   0s     bash
 
 Let's have a look at how we can use this tool and library in the context of
 containers. As a simple show case, we'll start a Docker container, extract the
-process ID via `docker-inspect` and run the `gfpsgo` binary to extract the
-data of running processes within that container.
+process ID via `docker-inspect` and run the `gfpsgo` binary to extract the data
+of running processes within that container.
 
 ```shell
 $ docker run -d alpine sleep 100
@@ -205,4 +210,5 @@ PID     USER         GROUP        SECCOMP
 
 ## License
 
-- This software is provided under [The Apache 2.0 Software License](https://gitlab.gridfinity.com/go/gfpsgo/-/blob/master/LICENSE).
+- This software is provided under
+  [The Apache 2.0 Software License](https://gitlab.gridfinity.com/go/gfpsgo/-/blob/master/LICENSE).
