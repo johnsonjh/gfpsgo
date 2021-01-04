@@ -61,7 +61,7 @@ linux job:
     - dnf upgrade --refresh -y
     - dnf groupinstall "Development Tools" -y
     - dnf install epel-release centos-release-scl centos-release-scl-rh -y
-    - dnf install ccache pv valgrind graphviz clang zsh scl-utils devtoolset-9 -y
+    - dnf install upx ccache pv valgrind graphviz clang zsh scl-utils devtoolset-9 -y
     - dnf groupupdate base -y
     - source /opt/rh/devtoolset-9/enable
     - dnf clean all -y
