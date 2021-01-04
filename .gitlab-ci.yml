@@ -66,9 +66,9 @@ linux job:
     - source /opt/rh/devtoolset-9/enable
     - dnf clean all -y
     - | 
-        # gimme go 1.15.6
+        # gimme go stable (latest release)
         bash --norc --noprofile --posix -o pipefail -c "set -e && mkdir -p /tools/bin && curl -fsSL -o /tools/bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme && chmod a+x /tools/bin/gimme"
-        bash --norc --noprofile --posix -o pipefail -c "set -e && mkdir -p /tools/gimme && GIMME_SILENT_ENV=1 GIMME_ENV_PREFIX=/tools/gimme/env GIMME_VERSION_PREFIX=/tools/gimme/ver GIMME_GO_VERSION=1.15.6 GIMME_CGO_ENABLED=1 /tools/bin/gimme" > /tools/genv && source /tools/genv
+        bash --norc --noprofile --posix -o pipefail -c "set -e && mkdir -p /tools/gimme && GIMME_SILENT_ENV=1 GIMME_ENV_PREFIX=/tools/gimme/env GIMME_VERSION_PREFIX=/tools/gimme/ver GIMME_GO_VERSION=stable GIMME_CGO_ENABLED=1 /tools/bin/gimme" > /tools/genv && source /tools/genv
     - source /tools/genv
     - go env -w GO111MODULE=on && export GO111MODULE=on
     - export GOPROXY="https://proxy.golang.org,direct" && go env -w GOPROXY="${GOPROXY:?}"
