@@ -1,6 +1,6 @@
 // Copyright 2018 psgo authors.
-// Copyright 2020 Gridfinity, LLC.
-// Copyright 2020 Jeffrey H. Johnson.
+// Copyright 2021 Gridfinity, LLC.
+// Copyright 2021 Jeffrey H. Johnson.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
