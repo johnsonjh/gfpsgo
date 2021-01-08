@@ -1,6 +1,6 @@
-// Copyright 2018 psgo authors.
 // Copyright 2021 Gridfinity, LLC.
 // Copyright 2021 Jeffrey H. Johnson.
+// Copyright 2020 The psgo authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// Package psgo is a ps (1) AIX-format compatible golang library extended
+// Package gfpsgo is a ps (1) AIX-format compatible golang library extended
 // with various descriptors useful for displaying container-related data.
 //
 // The idea behind the library is to provide an easy to use way of extracting
