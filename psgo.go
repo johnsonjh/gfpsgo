@@ -828,8 +828,8 @@ func processVSZ(p *process.Process, _ *psContext) (string, error) {
 // parseCAP parses cap (a string bit mask) and returns the associated set of
 // capabilities.  If all capabilities are set, "full" is returned.  If no
 // capability is enabled, "none" is returned.
-func parseCAP(cap string) (string, error) {
-	mask, err := strconv.ParseUint(cap, 16, 64)
+func parseCAP(capz string) (string, error) {
+	mask, err := strconv.ParseUint(capz, 16, 64)
 	if err != nil {
 		return "", err
 	}
