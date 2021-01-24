@@ -27,7 +27,7 @@ limitations under the License.
     members with at least Reporter access._"
 
   - Or, send a **PGP-encrypted** email to
-    \<[jeff@gridfinity.com](mailto:jeff@gridfinity.com)\>
+    [jeff@gridfinity.com](mailto:jeff@gridfinity.com)
 
 ```text
 -----BEGIN PGP PUBLIC KEY BLOCK-----
