@@ -49,7 +49,7 @@ func BootTime() (int64, error) {
 		}
 	}
 
-	if len(btimeStr) == 0 {
+	if btimeStr == "" {
 		return 0, fmt.Errorf("couldn't extract boot time from /proc/stat")
 	}
 
