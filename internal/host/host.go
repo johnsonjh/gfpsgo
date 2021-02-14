@@ -13,8 +13,7 @@
 // limitations under the License.
 
 // Package host extracts data from the host, such as the system's boot time
-// or
-// the tick rate of the system clock.
+// or the tick rate of the system clock.
 package host
 
 import (

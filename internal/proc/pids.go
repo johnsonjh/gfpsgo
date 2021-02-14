@@ -52,9 +52,8 @@ func GetPIDs() ([]string, error) {
 	return pids, nil
 }
 
-// GetPIDsFromCgroup returns a strings slice of all pids listesd in pid's
-// pids
-// cgroup.  It automatically detects if we're running in unified mode or not.
+// GetPIDsFromCgroup returns a strings slice of all pids listesd in pid's pids
+// cgroup. It auto-detects if we're running in unified mode, or not.
 func GetPIDsFromCgroup(pid string) ([]string, error) {
 	unified, err := cgroups.IsCgroup2UnifiedMode()
 	if err != nil {
@@ -67,8 +66,7 @@ func GetPIDsFromCgroup(pid string) ([]string, error) {
 }
 
 // getPIDsFromCgroupV1 returns a strings slice of all pids listesd in pid's
-// pids
-// cgroup.
+// pids cgroup.
 func getPIDsFromCgroupV1(pid string) ([]string, error) {
 	// First, find the corresponding path to the PID cgroup.
 	f, err := os.Open(fmt.Sprintf("/proc/%s/cgroup", pid))
@@ -113,8 +111,7 @@ func getPIDsFromCgroupV1(pid string) ([]string, error) {
 }
 
 // getPIDsFromCgroupV2 returns a strings slice of all pids listesd in pid's
-// pids
-// cgroup.
+// pids cgroup.
 func getPIDsFromCgroupV2(pid string) ([]string, error) {
 	// First, find the corresponding path to the PID cgroup.
 	f, err := os.Open(fmt.Sprintf("/proc/%s/cgroup", pid))

@@ -60,8 +60,7 @@ func LookupGID(gid string) (string, error) {
 }
 
 // LookupUID return the textual user ID, if it can be obtained, or the
-// decimal
-// representation otherwise.
+// decimal representation otherwise.
 func LookupUID(uid string) (string, error) {
 	uidNum, err := strconv.Atoi(uid)
 	if err != nil {

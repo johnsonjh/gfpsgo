@@ -12,7 +12,6 @@
 ### Source Code
 
 - [Gridfinity GitLab](https://gitlab.gridfinity.com/go/gfpsgo)
-- [SourceHut](https://sr.ht/~trn/gfpsgo)
 - [GitHub](https://github.com/gridfinity/gfpsgo)
 
 ### Issue Tracking
@@ -214,3 +213,4 @@ PID     USER         GROUP        SECCOMP
 
 - This software is provided under
   [The Apache 2.0 Software License](https://gitlab.gridfinity.com/go/gfpsgo/-/blob/master/LICENSE).
+

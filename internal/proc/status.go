@@ -179,8 +179,7 @@ type Status struct {
 }
 
 // readStatusUserNS joins the user namespace of pid and returns the content
-// of
-// /proc/pid/status as a string slice.
+// of /proc/pid/status as a string slice.
 func readStatusUserNS(pid string) ([]string, error) {
 	path := fmt.Sprintf("/proc/%s/status", pid)
 	args := []string{"nsenter", "-U", "-t", pid, "cat", path}
@@ -198,8 +197,7 @@ func readStatusUserNS(pid string) ([]string, error) {
 	return strings.Split(string(output), "\n"), nil
 }
 
-// readStatusDefault returns the content of /proc/pid/status as a string
-// slice.
+// readStatusDefault returns the content of /proc/pid/status as a string slice.
 func readStatusDefault(pid string) ([]string, error) {
 	path := fmt.Sprintf("/proc/%s/status", pid)
 	f, err := os.Open(path)

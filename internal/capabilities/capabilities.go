@@ -13,9 +13,8 @@
 // limitations under the License.
 
 // Package capabilities provides a mapping from common kernel bit masks to
-// the
-// alphanumerical representation of kernel capabilities.  See capabilities(7)
-// for additional information.
+// the alphanumerical representation of kernel capabilities.
+// See capabilities(7) for additional information.
 package capabilities
 
 var (
@@ -66,17 +65,14 @@ var (
 		37: "AUDIT_READ",
 	}
 
-	// FullCAPs represents the value of a bitmask with a full capability
-	// set.
+	// FullCAPs represents a bitmask with a full capability set.
 	FullCAPs = uint64(0x3FFFFFFFFF)
 )
 
 // TranslateMask iterates over mask and returns a slice of corresponding
 // capabilities.  If a bit is out of range of known capabilities, it is set
-// as
-// "unknown" to catch potential regressions when new capabilities are added
-// to
-// the kernel.
+// as "unknown" to catch potential regressions when new capabilities are
+// added to the kernel.
 func TranslateMask(mask uint64) []string {
 	caps := []string{}
 	for i := uint(0); i < 64; i++ {
