@@ -7,8 +7,8 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"github.com/sirupsen/logrus"
 	psgo "github.com/johnsonjh/gfpsgo"
+	"github.com/sirupsen/logrus"
 )
 
 func main() {

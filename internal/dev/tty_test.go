@@ -18,8 +18,8 @@ package dev
 import (
 	"testing"
 
-	"github.com/stretchr/testify/assert"
 	u "github.com/johnsonjh/leaktestfe"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestGetTTYs(t *testing.T) {

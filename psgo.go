@@ -36,11 +36,11 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/pkg/errors"
 	"github.com/johnsonjh/gfpsgo/internal/capabilities"
 	"github.com/johnsonjh/gfpsgo/internal/dev"
 	"github.com/johnsonjh/gfpsgo/internal/proc"
 	"github.com/johnsonjh/gfpsgo/internal/process"
+	"github.com/pkg/errors"
 	"golang.org/x/sys/unix"
 )
 

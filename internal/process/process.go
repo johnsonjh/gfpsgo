@@ -20,10 +20,10 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/opencontainers/runc/libcontainer/user"
-	"github.com/pkg/errors"
 	"github.com/johnsonjh/gfpsgo/internal/host"
 	"github.com/johnsonjh/gfpsgo/internal/proc"
+	"github.com/opencontainers/runc/libcontainer/user"
+	"github.com/pkg/errors"
 )
 
 // Process includes process-related from the /proc FS.

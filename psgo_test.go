@@ -19,10 +19,10 @@ package gfpsgo // import "github.com/johnsonjh/gfpsgo"
 import (
 	"testing"
 
-	"github.com/stretchr/testify/assert"
 	"github.com/johnsonjh/gfpsgo/internal/proc"
 	"github.com/johnsonjh/gfpsgo/internal/process"
 	u "github.com/johnsonjh/leaktestfe"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestProcessARGS(t *testing.T) {
