@@ -1,3 +1,4 @@
+// Copyright 2021 Jeffery H. Johnson <trnsz@pobox.com>
 // Copyright 2021 Gridfinity, LLC.
 // Copyright 2020 The psgo authors.
 //
@@ -23,7 +24,7 @@
 // fork and execute ps either in the container or filter the output
 // afterwards, further limiting applicability.
 //
-package gfpsgo // import "go.gridfinity.dev/gfpsgo"
+package gfpsgo // import "github.com/johnsonjh/gfpsgo"
 
 import (
 	"fmt"
@@ -36,10 +37,10 @@ import (
 	"sync"
 
 	"github.com/pkg/errors"
-	"go.gridfinity.dev/gfpsgo/internal/capabilities"
-	"go.gridfinity.dev/gfpsgo/internal/dev"
-	"go.gridfinity.dev/gfpsgo/internal/proc"
-	"go.gridfinity.dev/gfpsgo/internal/process"
+	"github.com/johnsonjh/gfpsgo/internal/capabilities"
+	"github.com/johnsonjh/gfpsgo/internal/dev"
+	"github.com/johnsonjh/gfpsgo/internal/proc"
+	"github.com/johnsonjh/gfpsgo/internal/process"
 	"golang.org/x/sys/unix"
 )
 

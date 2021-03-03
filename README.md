@@ -2,22 +2,6 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/70e5cccdcc1a418cb7e8c2302f818220)](https://app.codacy.com/gh/gridfinity/gfpsgo?utm_source=github.com&utm_medium=referral&utm_content=gridfinity/gfpsgo&utm_campaign=Badge_Grade)
 
-## Availability
-
-### Go Modules
-
-- [go.gridfinity.dev](https://go.gridfinity.dev/gfpsgo)
-- [go.gridfinity.com](https://go.gridfinity.com)
-
-### Source Code
-
-- [Gridfinity GitLab](https://gitlab.gridfinity.com/go/gfpsgo)
-- [GitHub](https://github.com/gridfinity/gfpsgo)
-
-### Issue Tracking
-
-- [Gridfinity GitLab Issues](https://gitlab.gridfinity.com/go/gfpsgo/-/issues)
-
 ## Code of Conduct
 
 - While we "inherit" the
@@ -29,14 +13,6 @@
   their authority as they see fit per the Code of Conduct, and in any way they
   deem appropriate. Gridfinity will _NOT_ intervene or offer any assistance or
   intervene in any upstream disputes.
-
-## Security Policy
-
-- We **do not** follow the _Containers Community Security Policy_ in any way.
-  Please review our Gridfinity-specific
-  [Security Policy and Vulnerability Reporting](https://gitlab.gridfinity.com/go/gfpsgo/-/blob/master/SECURITY.md)
-  document for all details. **DO NOT** bother the upstream maintainers, or their
-  community, for matters regarding this version of the software.
 
 ## Overview
 

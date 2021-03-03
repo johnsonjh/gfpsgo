@@ -1,3 +1,4 @@
+// Copyright 2021 Jeffrey H. Johnson <trnsz@pobox.com>
 // Copyright 2018 psgo authors
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,7 +19,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	u "go.gridfinity.dev/leaktestfe"
+	u "github.com/johnsonjh/leaktestfe"
 )
 
 func TestGetTTYs(t *testing.T) {

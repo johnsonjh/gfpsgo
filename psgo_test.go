@@ -1,3 +1,4 @@
+// Copyright 2021 Jeffrey H. Johnson <trnsz@pobox.com>
 // Copyright 2018 psgo authors.
 // Copyright 2021 Gridfinity, LLC.
 //
@@ -13,15 +14,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package gfpsgo // import "go.gridfinity.dev/gfpsgo"
+package gfpsgo // import "github.com/johnsonjh/gfpsgo"
 
 import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"go.gridfinity.dev/gfpsgo/internal/proc"
-	"go.gridfinity.dev/gfpsgo/internal/process"
-	u "go.gridfinity.dev/leaktestfe"
+	"github.com/johnsonjh/gfpsgo/internal/proc"
+	"github.com/johnsonjh/gfpsgo/internal/process"
+	u "github.com/johnsonjh/leaktestfe"
 )
 
 func TestProcessARGS(t *testing.T) {

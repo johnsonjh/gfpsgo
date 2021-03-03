@@ -1,3 +1,4 @@
+// Copyright 2021 Jeffrey H. Johnson <trnsz@pobox.com>
 // Copyright 2018 psgo authors
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,8 +22,8 @@ import (
 
 	"github.com/opencontainers/runc/libcontainer/user"
 	"github.com/pkg/errors"
-	"go.gridfinity.dev/gfpsgo/internal/host"
-	"go.gridfinity.dev/gfpsgo/internal/proc"
+	"github.com/johnsonjh/gfpsgo/internal/host"
+	"github.com/johnsonjh/gfpsgo/internal/proc"
 )
 
 // Process includes process-related from the /proc FS.

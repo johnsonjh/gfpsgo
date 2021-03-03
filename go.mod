@@ -1,4 +1,4 @@
-module go.gridfinity.dev/gfpsgo
+module github.com/johnsonjh/gfpsgo
 
 go 1.14
 
@@ -12,7 +12,7 @@ require (
 	github.com/stretchr/objx v0.3.1-0.20210208113821-6c797d85514c // indirect
 	github.com/stretchr/testify v1.7.1-0.20210116013205-6990a05d54c2
 	github.com/urfave/cli v1.22.5 // indirect
-	go.gridfinity.dev/leaktestfe v0.0.0-20210215130230-ae7c71425363
+	github.com/johnsonjh/leaktestfe v0.0.0-20210215130230-ae7c71425363
 	go.uber.org/goleak v1.1.11-0.20200902203756-89d54f0adef2 // indirect
 	golang.org/x/sys v0.0.0-20210124154548-22da62e12c0c
 )

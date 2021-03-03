@@ -1,4 +1,4 @@
-package main // import "go.gridfinity.dev/cmd/gfpsgo"
+package main
 
 import (
 	"flag"
@@ -8,7 +8,7 @@ import (
 	"text/tabwriter"
 
 	"github.com/sirupsen/logrus"
-	psgo "go.gridfinity.dev/gfpsgo"
+	psgo "github.com/johnsonjh/gfpsgo"
 )
 
 func main() {
