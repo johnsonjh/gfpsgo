@@ -1,18 +1,6 @@
 # gfpsgo for Linux
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/70e5cccdcc1a418cb7e8c2302f818220)](https://app.codacy.com/gh/gridfinity/gfpsgo?utm_source=github.com&utm_medium=referral&utm_content=gridfinity/gfpsgo&utm_campaign=Badge_Grade)
-
-## Code of Conduct
-
-- While we "inherit" the
-  [_Containers Community Code of Conduct_](https://github.com/containers/common/blob/master/CODE-OF-CONDUCT.md)
-  from the upstream `psgo` project, Gridfinity will **_NOT_** enforce this Code
-  of Conduct. We furthermore recommend that any users of the this version of the
-  software have **no interaction** with the greater "_Containers Community_". If
-  you decide to ignore this advice, you must expect that community to exercise
-  their authority as they see fit per the Code of Conduct, and in any way they
-  deem appropriate. Gridfinity will _NOT_ intervene or offer any assistance or
-  intervene in any upstream disputes.
+----
 
 ## Overview
 
@@ -68,6 +56,8 @@ The API consists of the following functions:
     descriptors in their normal form (for example, "args, comm, user", etc.) It
     can be useful in the context of shell completion, help messages, etc.
 
+----
+
 ## Listing all processes
 
 We can use the `gfpsgo` tool included with the project to test the core
@@ -85,6 +75,8 @@ root         4       2       0.000    6h3m27.678701852s    ?        0s          
 root         6       2       0.000    6h3m27.678999508s    ?        0s          [mm_percpu_wq]
 ```
 
+----
+
 ## Listing specific processes
 
 You can use the `--pids` flag to restrict `gfpsgo` output to a subset of
@@ -98,6 +90,8 @@ root   1       0       0.009   128h52m44.193475932s   ?       40s    systemd
 root   20830   20827   0.000   105h2m44.19579679s     pts/5   0s     bash
 root   25843   25840   0.000   102h56m4.196072027s    pts/6   0s     bash
 ```
+
+----
 
 ## Listing processes within a container
 
@@ -117,6 +111,8 @@ $ sudo ./bin/psgo -pids 5572 -join
 USER   PID   PPID   %CPU    ELAPSED         TTY   TIME   COMMAND
 root   1     0      0.000   17.249905587s   ?     0s     sleep
 ```
+
+----
 
 ## Format descriptors
 
@@ -185,7 +181,20 @@ PID     USER         GROUP        SECCOMP
 6       root         root         disabled
 ```
 
+----
+
+## Availability
+
+- [GitHub](https://github.com/johnsonjh/gfpsgo)
+- [GitLab](https://gitlab.com/johnsonjh/gfpsgo)
+- [SourceHut](https://sr.ht/~trn/gfpsgo)
+- [NotABug](https://notabug.org/trn/gfpsgo)
+
+----
+
 ## License
 
 - This software is provided under
   [The Apache 2.0 Software License](https://gitlab.gridfinity.com/go/gfpsgo/-/blob/master/LICENSE).
+
+----
