@@ -9,5 +9,5 @@ require (
 	github.com/sirupsen/logrus v1.8.2-0.20210318095723-fdf1618bf743
 	github.com/stretchr/testify v1.7.1-0.20210116013205-6990a05d54c2
 	go.uber.org/goleak v1.1.11-0.20200902203756-89d54f0adef2
-	golang.org/x/sys v0.0.0-20210403161142-5e06dd20ab57
+	golang.org/x/sys v0.0.0-20210414055047-fe65e336abe0
 )
