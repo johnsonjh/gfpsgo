@@ -1,13 +1,11 @@
 version = 1
 
-test_patterns = ["*_test.go"]
-
 [[analyzers]]
 name = "go"
 enabled = true
 
   [analyzers.meta]
-  import_paths = ["github.com/gridfinity/gfpsgo"]
+  import_paths = ["github.com/johnsonjh/gfpsgo"]
 
 [[analyzers]]
 name = "test-coverage"
@@ -19,10 +17,6 @@ enabled = true
 
 [[analyzers]]
 name = "secrets"
-enabled = true
-
-[[transformers]]
-name = "yapf"
 enabled = true
 
 [[transformers]]
@@ -42,17 +36,21 @@ name = "prettier"
 enabled = true
 
 [[transformers]]
-name = "standardjs"
-enabled = true
-
-[[transformers]]
-name = "rubocop"
-enabled = true
-
-[[transformers]]
 name = "black"
 enabled = true
 
 [[transformers]]
 name = "gofmt"
+enabled = true
+
+[[transformers]]
+name = "yapf"
+enabled = true
+
+[[transformers]]
+name = "standardjs"
+enabled = true
+
+[[transformers]]
+name = "rubocop"
 enabled = true
