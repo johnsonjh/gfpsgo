@@ -1,6 +1,6 @@
 # gfpsgo for Linux
 
-----
+---
 
 ## Overview
 
@@ -56,7 +56,7 @@ The API consists of the following functions:
     descriptors in their normal form (for example, "args, comm, user", etc.) It
     can be useful in the context of shell completion, help messages, etc.
 
-----
+---
 
 ## Listing all processes
 
@@ -75,7 +75,7 @@ root         4       2       0.000    6h3m27.678701852s    ?        0s          
 root         6       2       0.000    6h3m27.678999508s    ?        0s          [mm_percpu_wq]
 ```
 
-----
+---
 
 ## Listing specific processes
 
@@ -91,7 +91,7 @@ root   20830   20827   0.000   105h2m44.19579679s     pts/5   0s     bash
 root   25843   25840   0.000   102h56m4.196072027s    pts/6   0s     bash
 ```
 
-----
+---
 
 ## Listing processes within a container
 
@@ -112,7 +112,7 @@ USER   PID   PPID   %CPU    ELAPSED         TTY   TIME   COMMAND
 root   1     0      0.000   17.249905587s   ?     0s     sleep
 ```
 
-----
+---
 
 ## Format descriptors
 
@@ -181,7 +181,7 @@ PID     USER         GROUP        SECCOMP
 6       root         root         disabled
 ```
 
-----
+---
 
 ## Availability
 
@@ -190,11 +190,11 @@ PID     USER         GROUP        SECCOMP
 - [SourceHut](https://sr.ht/~trn/gfpsgo)
 - [NotABug](https://notabug.org/trn/gfpsgo)
 
-----
+---
 
 ## License
 
 - This software is provided under
   [The Apache 2.0 Software License](https://gitlab.gridfinity.com/go/gfpsgo/-/blob/master/LICENSE).
 
-----
+---
