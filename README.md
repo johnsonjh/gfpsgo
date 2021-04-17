@@ -1,5 +1,7 @@
 # gfpsgo for Linux
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/07c320e9836d870b12d8/maintainability)](https://codeclimate.com/github/johnsonjh/gfpsgo/maintainability)
+
 ---
 
 ## Overview
