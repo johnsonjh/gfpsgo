@@ -3,7 +3,7 @@ module github.com/johnsonjh/gfpsgo
 go 1.14
 
 require (
-	github.com/johnsonjh/leaktestfe v0.0.0-20210305084125-5614f292a6a
+	github.com/johnsonjh/leaktestfe v0.0.0-20210417033227-1351914ec3a1
 	github.com/opencontainers/runc v1.0.0-rc93.0.20210415020343-fce58ab2d5c4
 	github.com/pkg/errors v0.9.2-0.20201214064552-5dd12d0cfe7f
 	github.com/sirupsen/logrus v1.8.2-0.20210318095723-fdf1618bf743
