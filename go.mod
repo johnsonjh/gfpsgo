@@ -1,6 +1,6 @@
 module github.com/johnsonjh/gfpsgo
 
-go 1.15
+go 1.16
 
 require (
 	github.com/johnsonjh/leaktestfe v0.0.0-20210417042619-44f7010a6410
