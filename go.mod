@@ -12,6 +12,6 @@ require (
 	github.com/stretchr/testify v1.7.1-0.20210427113832-6241f9ab9942
 	go.uber.org/goleak v1.1.11-0.20200902203756-89d54f0adef2
 	golang.org/x/lint v0.0.0-20210508222113-6edffad5e616 // indirect
-	golang.org/x/sys v0.0.0-20210510120138-977fb7262007
+	golang.org/x/sys v0.0.0-20210511113859-b0526f3d8744
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
 )
