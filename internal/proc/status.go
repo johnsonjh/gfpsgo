@@ -189,7 +189,7 @@ func readStatusUserNS(pid string) ([]string, error) {
 	output, err := c.CombinedOutput()
 	if err != nil {
 		return nil, fmt.Errorf(
-			"error executing %q: %v",
+			"error executing %q: %w",
 			strings.Join(args, " "),
 			err,
 		)
