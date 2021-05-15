@@ -10,10 +10,9 @@ require (
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/sirupsen/logrus v1.8.2-0.20210422133436-b50299cfaaa1
 	github.com/stretchr/testify v1.7.1-0.20210427113832-6241f9ab9942
-	go.uber.org/goleak v1.1.11-0.20210512180611-4d57db33bc87
-	golang.org/x/sys v0.0.0-20210514084401-e8d321eab015 // indirect
 	github.com/urfave/cli v1.22.5 // indirect
 	github.com/vishvananda/netns v0.0.0-20210104183010-2eb08e3e575f // indirect
+	go.uber.org/goleak v1.1.11-0.20210512180611-4d57db33bc87
 	golang.org/x/image v0.0.0-20210504121937-7319ad40d33e // indirect
 	golang.org/x/lint v0.0.0-20210508222113-6edffad5e616 // indirect
 	golang.org/x/mobile v0.0.0-20210220033013-bdb1ca9a1e08 // indirect
@@ -21,9 +20,10 @@ require (
 	golang.org/x/net v0.0.0-20210510120150-4163338589ed // indirect
 	golang.org/x/oauth2 v0.0.0-20210427180440-81ed05c6b58c // indirect
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c // indirect
+	golang.org/x/sys v0.0.0-20210514084401-e8d321eab015 // indirect
 	golang.org/x/term v0.0.0-20210503060354-a79de5458b56 // indirect
 	golang.org/x/text v0.3.7-0.20210503195748-5c7c50ebbd4f // indirect
-	golang.org/x/tools v0.1.2-0.20210511204214-be4aaae4cf86 // indirect
+	golang.org/x/tools v0.1.2-0.20210513173542-09ab05b0dbdd // indirect
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
 	google.golang.org/appengine v1.6.8-0.20210331171940-8f83b32138b3 // indirect
 	google.golang.org/protobuf v1.26.1-0.20210507170500-0e358a402f99 // indirect
