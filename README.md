@@ -18,7 +18,7 @@ container, or filter the output afterwards, which further limits usability.
 
 This tool and library is intended to make things more comfortable, especially
 for container runtimes. An API allows joining the mount namespace of a given
-process, and will parse `/proc` and `/dev/` filesystems automatically.
+process, and will parse `/proc` and `/dev` filesystems automatically.
 
 The API consists of the following functions:
 
