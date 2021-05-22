@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
-	github.com/johnsonjh/leaktestfe v0.0.0-20210518205409-7828c0e1b51e
+	github.com/johnsonjh/leaktestfe v0.0.0-20210522043628-c2602d3a6a18
 	github.com/kr/text v0.2.0 // indirect
 	github.com/opencontainers/runc v1.0.0-rc95
 	github.com/pkg/errors v0.9.2-0.20201214064552-5dd12d0cfe7f
