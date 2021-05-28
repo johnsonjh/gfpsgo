@@ -8,7 +8,7 @@ require (
 	github.com/kr/text v0.2.0 // indirect
 	github.com/opencontainers/runc v1.0.0-rc95
 	github.com/pkg/errors v0.9.2-0.20201214064552-5dd12d0cfe7f
-	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
+	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2
 	github.com/sirupsen/logrus v1.8.2-0.20210422133436-b50299cfaaa1
 	github.com/stretchr/testify v1.7.1-0.20210427113832-6241f9ab9942
 	go.uber.org/goleak v1.1.11-0.20210525221708-d36f3aede898
