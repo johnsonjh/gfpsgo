@@ -6,7 +6,7 @@ require (
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/johnsonjh/leaktestfe v0.0.0-20210616124443-1446a662defb
 	github.com/kr/text v0.2.0 // indirect
-	github.com/opencontainers/runc v1.0.0-rc93
+	github.com/opencontainers/runc v1.0.0
 	github.com/pkg/errors v0.9.2-0.20201214064552-5dd12d0cfe7f
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2
 	github.com/sirupsen/logrus v1.8.2-0.20210422133436-b50299cfaaa1
