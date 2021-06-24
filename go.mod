@@ -14,6 +14,6 @@ require (
 	golang.org/x/sys v0.0.0-20210616094352-59db8d763f22
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
 	go.uber.org/goleak v1.1.11-0.20210525221708-d36f3aede898
-	golang.org/x/tools v0.1.4-0.20210618183400-d25f90668280
+	golang.org/x/tools v0.1.4
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c
 )
