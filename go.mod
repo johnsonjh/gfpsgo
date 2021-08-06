@@ -36,6 +36,7 @@ require (
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/seccomp/libseccomp-golang v0.9.2-0.20210429002308-3879420cc921 // indirect
 	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect
+	github.com/stretchr/objx v0.3.1-0.20210716204454-4ff3852e7937 // indirect
 	github.com/syndtr/gocapability v0.0.0-20200815063812-42c35b437635 // indirect
 	github.com/urfave/cli v1.22.5 // indirect
 	github.com/vishvananda/netlink v1.1.1-0.20210703095558-21f2c55a7727 // indirect
