@@ -16,7 +16,7 @@ require (
 	github.com/checkpoint-restore/go-criu/v5 v5.1.0 // indirect
 	github.com/cilium/ebpf v0.6.3-0.20210812113047-896b66839069 // indirect
 	github.com/containerd/console v1.0.3 // indirect
-	github.com/coreos/go-systemd/v22 v22.3.3-0.20210729070054-f9f254610339 // indirect
+	github.com/coreos/go-systemd/v22 v22.3.2 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.1 // indirect
 	github.com/cyphar/filepath-securejoin v0.2.4-0.20210704111716-64536a8a66ae // indirect
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
@@ -27,14 +27,14 @@ require (
 	github.com/google/go-cmp v0.5.7-0.20210722231442-395a0ac54905 // indirect
 	github.com/kr/pretty v0.3.0 // indirect
 	github.com/kr/text v0.2.0 // indirect
-	github.com/moby/sys/mountinfo v0.4.2-0.20210812230444-1c371e4a7d2d // indirect
+	github.com/moby/sys/mountinfo v0.4.2-0.20210813220516-f3885c897d0f // indirect
 	github.com/mrunalp/fileutils v0.5.0 // indirect
 	github.com/opencontainers/runtime-spec v1.0.3-0.20210807113644-82ab996a5bf9 // indirect
 	github.com/opencontainers/selinux v1.8.4 // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/rogpeppe/go-internal v1.8.1-0.20210531173208-9df06c38c09b // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
-	github.com/seccomp/libseccomp-golang v0.9.2-0.20210429002308-3879420cc921 // indirect
+	github.com/seccomp/libseccomp-golang v0.9.2-0.20200616122406-847368b35ebf // indirect
 	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect
 	github.com/stretchr/objx v0.3.1-0.20210716204454-4ff3852e7937 // indirect
 	github.com/syndtr/gocapability v0.0.0-20200815063812-42c35b437635 // indirect
@@ -44,7 +44,7 @@ require (
 	go.uber.org/goleak v1.1.11-0.20210813005559-691160354723 // indirect
 	golang.org/x/lint v0.0.0-20210508222113-6edffad5e616 // indirect
 	golang.org/x/net v0.0.0-20210813160813-60bc85c4be6d // indirect
-	golang.org/x/tools v0.1.6-0.20210813165731-45389f592fe9 // indirect
+	golang.org/x/tools v0.1.6-0.20210815155149-a55d5155d907 // indirect
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
 	google.golang.org/protobuf v1.27.2-0.20210806184350-5aec41b4809b // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
