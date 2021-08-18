@@ -18,6 +18,8 @@ github.com/cilium/ebpf v0.6.3-0.20210805140510-e25d7cd46871 h1:m9DHTBzNvJpiZqSsi
 github.com/cilium/ebpf v0.6.3-0.20210805140510-e25d7cd46871/go.mod h1:4tRaxcgiL706VnOzHOdBlY8IEAIdxINsQBcU4xJJXRs=
 github.com/cilium/ebpf v0.6.3-0.20210812113047-896b66839069 h1:IzFz42MJa3ZgR/eEOMNnXXUztcB7mP4ocnHH0zo2nZU=
 github.com/cilium/ebpf v0.6.3-0.20210812113047-896b66839069/go.mod h1:4tRaxcgiL706VnOzHOdBlY8IEAIdxINsQBcU4xJJXRs=
+github.com/cilium/ebpf v0.6.3-0.20210817210855-429c5ea93f7a h1:c4Wxtd4ZJ0QvPkN/9pb5NC3YfqAjbvBb62TkkNKSgC8=
+github.com/cilium/ebpf v0.6.3-0.20210817210855-429c5ea93f7a/go.mod h1:4tRaxcgiL706VnOzHOdBlY8IEAIdxINsQBcU4xJJXRs=
 github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDkc90ppPyw=
 github.com/containerd/console v1.0.1/go.mod h1:XUsP6YE/mKtz6bxc+I8UiKKTP04qjQL4qcS3XoQ5xkw=
 github.com/containerd/console v1.0.2 h1:Pi6D+aZXM+oUw1czuKgH5IJ+y0jhYcwBJfx5/Ghn9dE=
@@ -58,6 +60,8 @@ github.com/frankban/quicktest v1.13.0 h1:yNZif1OkDfNoDfb9zZa9aXIpejNR4F23Wely0c+
 github.com/frankban/quicktest v1.13.0/go.mod h1:qLE0fzW0VuyUAJgPU19zByoIr0HtCHN/r/VLSOOIySU=
 github.com/frankban/quicktest v1.13.1-0.20210610140604-6234a4158d6f h1:bg8BKmq+mu+2KA0PkSp3ZinfYkgyuErsRiOcGOfN8NQ=
 github.com/frankban/quicktest v1.13.1-0.20210610140604-6234a4158d6f/go.mod h1:GjMqxn2wM0M1Uk5tIp3sHjzGR5InKD2H4Wt3csWwZzs=
+github.com/frankban/quicktest v1.13.1-0.20210817141732-c43f89ad6e0b h1:XkEEhOkpRShf7v9Hp5oWAyLkT6m0Fb3CRWCFH06UdxE=
+github.com/frankban/quicktest v1.13.1-0.20210817141732-c43f89ad6e0b/go.mod h1:NeW+ay9A/U67EYXNFA1nPE8e/tnQv/09mUdL/ijj8og=
 github.com/godbus/dbus/v5 v5.0.3/go.mod h1:xhWf0FNVPg57R7Z0UbKHbJfkEywrmjJnf7w5xrFpKfA=
 github.com/godbus/dbus/v5 v5.0.4 h1:9349emZab16e7zQvpmsbtjc18ykshndd8y2PG3sgJbA=
 github.com/godbus/dbus/v5 v5.0.4/go.mod h1:xhWf0FNVPg57R7Z0UbKHbJfkEywrmjJnf7w5xrFpKfA=
@@ -120,12 +124,16 @@ github.com/opencontainers/runc v1.0.1-0.20210804030900-8772c4dd2fd3 h1:3VuKuPa0h
 github.com/opencontainers/runc v1.0.1-0.20210804030900-8772c4dd2fd3/go.mod h1:FJM9mNFmoyQFOrK07gdYWnS2KQtk9ZONnKRpwgms6kg=
 github.com/opencontainers/runc v1.0.1-0.20210812062035-bb34048f9382 h1:cgEHQhGjCUOJgBrUjNvxUNBaTBrngcZhsyn4wyWCV+c=
 github.com/opencontainers/runc v1.0.1-0.20210812062035-bb34048f9382/go.mod h1:sEcH4LjJrq1zuq9Fll/Bki665yyEQ0ytvMFNFjTDZSE=
+github.com/opencontainers/runc v1.0.1-0.20210818024236-4d26c4a0a14e h1:Ya2tiTu/qDuJksp+OuZqafAAHKZ0U15j13bH91b5QNw=
+github.com/opencontainers/runc v1.0.1-0.20210818024236-4d26c4a0a14e/go.mod h1:sEcH4LjJrq1zuq9Fll/Bki665yyEQ0ytvMFNFjTDZSE=
 github.com/opencontainers/runtime-spec v1.0.3-0.20200929063507-e6143ca7d51d/go.mod h1:jwyrGlmzljRJv/Fgzds9SsS/C5hL+LL3ko9hs6T5lQ0=
 github.com/opencontainers/runtime-spec v1.0.3-0.20210326190908-1c3f411f0417/go.mod h1:jwyrGlmzljRJv/Fgzds9SsS/C5hL+LL3ko9hs6T5lQ0=
 github.com/opencontainers/runtime-spec v1.0.3-0.20210709190330-896175883324 h1:EPCbQw9GYqjcp8Y5Oz/RzEO3hlxA1MiQJ3DiYgzzUqg=
 github.com/opencontainers/runtime-spec v1.0.3-0.20210709190330-896175883324/go.mod h1:jwyrGlmzljRJv/Fgzds9SsS/C5hL+LL3ko9hs6T5lQ0=
 github.com/opencontainers/runtime-spec v1.0.3-0.20210807113644-82ab996a5bf9 h1:JHa5vf1SSshTiinIifeCHxVV7kSAgkU5zgNfI0d9Y2k=
 github.com/opencontainers/runtime-spec v1.0.3-0.20210807113644-82ab996a5bf9/go.mod h1:jwyrGlmzljRJv/Fgzds9SsS/C5hL+LL3ko9hs6T5lQ0=
+github.com/opencontainers/runtime-spec v1.0.3-0.20210816185030-20a2d9782986 h1:0TUOqQjAuXqekoGEAxtZ+fqcaotoFvTrm4t01vJAV38=
+github.com/opencontainers/runtime-spec v1.0.3-0.20210816185030-20a2d9782986/go.mod h1:jwyrGlmzljRJv/Fgzds9SsS/C5hL+LL3ko9hs6T5lQ0=
 github.com/opencontainers/selinux v1.8.0/go.mod h1:RScLhm78qiWa2gbVCcGkC7tCGdgk3ogry1nUQF8Evvo=
 github.com/opencontainers/selinux v1.8.2-0.20210511180809-ea2e2c464952 h1:YBdGpXPGeXctiLOXi8B50Nflh/Y9Iewa/cnnsXk18XE=
 github.com/opencontainers/selinux v1.8.2-0.20210511180809-ea2e2c464952/go.mod h1:RScLhm78qiWa2gbVCcGkC7tCGdgk3ogry1nUQF8Evvo=
@@ -272,6 +280,8 @@ golang.org/x/tools v0.1.6-0.20210813165731-45389f592fe9 h1:nvvuMxmx1q0gfRki3T0hj
 golang.org/x/tools v0.1.6-0.20210813165731-45389f592fe9/go.mod h1:o0xws9oXOQQZyjljx8fwUC0k7L1pTE6eaCbjGeHmOkk=
 golang.org/x/tools v0.1.6-0.20210815155149-a55d5155d907 h1:99ozGEXiGbcdVvkm8AVh7xCz9v47zdGhSP1Rd3wE090=
 golang.org/x/tools v0.1.6-0.20210815155149-a55d5155d907/go.mod h1:o0xws9oXOQQZyjljx8fwUC0k7L1pTE6eaCbjGeHmOkk=
+golang.org/x/tools v0.1.6-0.20210817170138-e32504ce151a h1:zFGlRCzzyMu0iJyCGtk4O7nNx/+JdowPeyw6nceyBq4=
+golang.org/x/tools v0.1.6-0.20210817170138-e32504ce151a/go.mod h1:o0xws9oXOQQZyjljx8fwUC0k7L1pTE6eaCbjGeHmOkk=
 golang.org/x/xerrors v0.0.0-20190717185122-a985d3407aa7/go.mod h1:I/5z698sn9Ka8TeJc9MKroUUfqBBauWjQqLJ2OPfmY0=
 golang.org/x/xerrors v0.0.0-20191011141410-1b5146add898/go.mod h1:I/5z698sn9Ka8TeJc9MKroUUfqBBauWjQqLJ2OPfmY0=
 golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543/go.mod h1:I/5z698sn9Ka8TeJc9MKroUUfqBBauWjQqLJ2OPfmY0=
