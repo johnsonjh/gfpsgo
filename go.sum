@@ -126,6 +126,8 @@ github.com/opencontainers/runc v1.0.1-0.20210812062035-bb34048f9382 h1:cgEHQhGjC
 github.com/opencontainers/runc v1.0.1-0.20210812062035-bb34048f9382/go.mod h1:sEcH4LjJrq1zuq9Fll/Bki665yyEQ0ytvMFNFjTDZSE=
 github.com/opencontainers/runc v1.0.1-0.20210818024236-4d26c4a0a14e h1:Ya2tiTu/qDuJksp+OuZqafAAHKZ0U15j13bH91b5QNw=
 github.com/opencontainers/runc v1.0.1-0.20210818024236-4d26c4a0a14e/go.mod h1:sEcH4LjJrq1zuq9Fll/Bki665yyEQ0ytvMFNFjTDZSE=
+github.com/opencontainers/runc v1.0.2 h1:opHZMaswlyxz1OuGpBE53Dwe4/xF7EZTY0A2L/FpCOg=
+github.com/opencontainers/runc v1.0.2/go.mod h1:aTaHFFwQXuA71CiyxOdFFIorAoemI04suvGRQFzWTD0=
 github.com/opencontainers/runtime-spec v1.0.3-0.20200929063507-e6143ca7d51d/go.mod h1:jwyrGlmzljRJv/Fgzds9SsS/C5hL+LL3ko9hs6T5lQ0=
 github.com/opencontainers/runtime-spec v1.0.3-0.20210326190908-1c3f411f0417/go.mod h1:jwyrGlmzljRJv/Fgzds9SsS/C5hL+LL3ko9hs6T5lQ0=
 github.com/opencontainers/runtime-spec v1.0.3-0.20210709190330-896175883324 h1:EPCbQw9GYqjcp8Y5Oz/RzEO3hlxA1MiQJ3DiYgzzUqg=
