@@ -3,7 +3,7 @@ module github.com/johnsonjh/gfpsgo
 go 1.17
 
 require (
-	github.com/johnsonjh/leaktestfe v0.0.0-20210729072946-c65fb1faa282
+	github.com/johnsonjh/leaktestfe v0.0.0-20210913171754-db3c2857f219
 	github.com/opencontainers/runc v1.0.2
 	github.com/pkg/errors v0.9.2-0.20201214064552-5dd12d0cfe7f
 	github.com/sirupsen/logrus v1.8.2-0.20210422133436-b50299cfaaa1
@@ -41,7 +41,7 @@ require (
 	github.com/urfave/cli v1.22.5 // indirect
 	github.com/vishvananda/netlink v1.1.1-0.20210811191823-e1a867c6b452 // indirect
 	github.com/vishvananda/netns v0.0.0-20210104183010-2eb08e3e575f // indirect
-	go.uber.org/goleak v1.1.11-0.20210813005559-691160354723 // indirect
+	go.uber.org/goleak v1.1.11 // indirect
 	golang.org/x/lint v0.0.0-20210508222113-6edffad5e616 // indirect
 	golang.org/x/net v0.0.0-20210813160813-60bc85c4be6d // indirect
 	golang.org/x/tools v0.1.6-0.20210820212750-d4cc65f0b2ff // indirect
