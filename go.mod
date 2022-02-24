@@ -8,7 +8,7 @@ require (
 	github.com/pkg/errors v0.9.2-0.20201214064552-5dd12d0cfe7f
 	github.com/sirupsen/logrus v1.8.2-0.20210912140916-79c5ab66aa2c
 	github.com/stretchr/testify v1.7.1-0.20210824115523-ab6dc3262822
-	golang.org/x/sys v0.0.0-20220224003255-dbe011f71a99
+	golang.org/x/sys v0.0.0-20220224120231-95c6836cb0e7
 )
 
 require (
