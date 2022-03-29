@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/johnsonjh/leaktestfe v0.0.0-20211209070910-8867fa9b8525
-	github.com/opencontainers/runc v1.1.0
+	github.com/opencontainers/runc v1.1.1
 	github.com/pkg/errors v0.9.2-0.20201214064552-5dd12d0cfe7f
 	github.com/sirupsen/logrus v1.8.2-0.20220112234510-85981c045988
 	github.com/stretchr/testify v1.7.1
