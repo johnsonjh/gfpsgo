@@ -7,7 +7,7 @@ require (
 	github.com/opencontainers/runc v1.1.2
 	github.com/pkg/errors v0.9.2-0.20201214064552-5dd12d0cfe7f
 	github.com/sirupsen/logrus v1.8.2-0.20220112234510-85981c045988
-	github.com/stretchr/testify v1.7.2-0.20220317124727-77977386932a
+	github.com/stretchr/testify v1.7.2
 	golang.org/x/sys v0.0.0-20220520151302-bc2c85ada10a
 )
 
@@ -18,5 +18,5 @@ require (
 	github.com/stretchr/objx v0.3.1-0.20220322103904-2f77885d62f1 // indirect
 	go.uber.org/goleak v1.1.13-0.20220315213901-ebabc7b15e40 // indirect
 	golang.org/x/tools v0.1.11-0.20220404195034-4077921f14b3 // indirect
-	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
