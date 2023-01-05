@@ -60,6 +60,8 @@ github.com/stretchr/testify v1.8.2-0.20221102114659-1333b5d3bda8 h1:/Z4A01Ei2R0E
 github.com/stretchr/testify v1.8.2-0.20221102114659-1333b5d3bda8/go.mod h1:w2LPCIKwWwSfY2zedu0+kehJoqGctiVI29o6fzry7u4=
 github.com/stretchr/testify v1.8.2-0.20221220093916-9acc22213e5f h1:RJV58Y/hqHtwU4ZCNHYOos5bFltjpYx+x7EDC7y2kj8=
 github.com/stretchr/testify v1.8.2-0.20221220093916-9acc22213e5f/go.mod h1:w2LPCIKwWwSfY2zedu0+kehJoqGctiVI29o6fzry7u4=
+github.com/stretchr/testify v1.8.2-0.20230103105711-0ab3ce124929 h1:eaEHGJSxSDCbxjCDO7Dq3rzvku4oMDfCqM8mw28JhFs=
+github.com/stretchr/testify v1.8.2-0.20230103105711-0ab3ce124929/go.mod h1:w2LPCIKwWwSfY2zedu0+kehJoqGctiVI29o6fzry7u4=
 github.com/syndtr/gocapability v0.0.0-20200815063812-42c35b437635/go.mod h1:hkRG7XYTFWNJGYcbNJQlaLq0fg1yr4J4t/NcTQtrfww=
 github.com/urfave/cli v1.22.1/go.mod h1:Gos4lmkARVdJ6EkW0WaNv/tZAAMe9V7XWyB60NtXRu0=
 github.com/vishvananda/netlink v1.1.0/go.mod h1:cTgwzPIzzgDAYoQrMm0EdrjRUBkTqKYppBueQtXaqoE=
