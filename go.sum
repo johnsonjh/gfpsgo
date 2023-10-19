@@ -23,6 +23,8 @@ github.com/johnsonjh/leaktestfe v0.0.0-20230904222242-20b8eb8ebdcb h1:TabVa+IH9S
 github.com/johnsonjh/leaktestfe v0.0.0-20230904222242-20b8eb8ebdcb/go.mod h1:QnMFw9Y6iD80QhJTwy5pF62L+GgFisd/4UosaNV/iuE=
 github.com/johnsonjh/leaktestfe v0.0.0-20230923024352-1f6ee42f9f13 h1:2Gxa1icp/Z0T1It8hKCJnZVngQp3K11oU0AbfSuakks=
 github.com/johnsonjh/leaktestfe v0.0.0-20230923024352-1f6ee42f9f13/go.mod h1:QnMFw9Y6iD80QhJTwy5pF62L+GgFisd/4UosaNV/iuE=
+github.com/johnsonjh/leaktestfe v0.0.0-20231019181440-c80ad1719297 h1:Ht1E0SInBfAg1pRN6OhFE1pmzGnU6Q0d1MlhJ/fXnVg=
+github.com/johnsonjh/leaktestfe v0.0.0-20231019181440-c80ad1719297/go.mod h1:QnMFw9Y6iD80QhJTwy5pF62L+GgFisd/4UosaNV/iuE=
 github.com/kr/pretty v0.2.1/go.mod h1:ipq/a2n7PKx3OHsz4KJII5eveXtPO4qwEXGdVfWzfnI=
 github.com/kr/pretty v0.3.1 h1:flRD4NNwYAUpkphVc1HcthR4KEIFJ65n8Mw5qdRn3LE=
 github.com/kr/pretty v0.3.1/go.mod h1:hoEshYVHaxMs3cyo3Yncou5ZscifuDolrwPKZanG3xk=
