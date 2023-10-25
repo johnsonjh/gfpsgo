@@ -25,6 +25,8 @@ github.com/johnsonjh/leaktestfe v0.0.0-20230923024352-1f6ee42f9f13 h1:2Gxa1icp/Z
 github.com/johnsonjh/leaktestfe v0.0.0-20230923024352-1f6ee42f9f13/go.mod h1:QnMFw9Y6iD80QhJTwy5pF62L+GgFisd/4UosaNV/iuE=
 github.com/johnsonjh/leaktestfe v0.0.0-20231019181440-c80ad1719297 h1:Ht1E0SInBfAg1pRN6OhFE1pmzGnU6Q0d1MlhJ/fXnVg=
 github.com/johnsonjh/leaktestfe v0.0.0-20231019181440-c80ad1719297/go.mod h1:QnMFw9Y6iD80QhJTwy5pF62L+GgFisd/4UosaNV/iuE=
+github.com/johnsonjh/leaktestfe v0.0.0-20231025005714-8df7eae756ab h1:Mzle1fmEfX31i8wM7WH3EDG8Jx6AZ6G/Ixfkfs8Rs9s=
+github.com/johnsonjh/leaktestfe v0.0.0-20231025005714-8df7eae756ab/go.mod h1:L1ATWvdIpazWSpShKalXkYj7Mu1R/5LlmwJ8pLq3ZXw=
 github.com/kr/pretty v0.2.1/go.mod h1:ipq/a2n7PKx3OHsz4KJII5eveXtPO4qwEXGdVfWzfnI=
 github.com/kr/pretty v0.3.1 h1:flRD4NNwYAUpkphVc1HcthR4KEIFJ65n8Mw5qdRn3LE=
 github.com/kr/pretty v0.3.1/go.mod h1:hoEshYVHaxMs3cyo3Yncou5ZscifuDolrwPKZanG3xk=
@@ -86,6 +88,8 @@ github.com/vishvananda/netlink v1.1.0/go.mod h1:cTgwzPIzzgDAYoQrMm0EdrjRUBkTqKYp
 github.com/vishvananda/netns v0.0.0-20191106174202-0a2b9b5464df/go.mod h1:JP3t17pCcGlemwknint6hfoeCVQrEMVwxRLRjXpq+BU=
 go.uber.org/goleak v1.2.2-0.20230213210001-751da596f6f7 h1:cnmZW/hz/FJAWBKyZlR57sJRY5htWrQbrykbUbJSbeI=
 go.uber.org/goleak v1.2.2-0.20230213210001-751da596f6f7/go.mod h1:qlT2yGI9QafXHhZZLxlSuNsMw3FFLxBr+tBRlmO1xH4=
+go.uber.org/goleak v1.3.0 h1:2K3zAYmnTNqV73imy9J1T3WC+gmCePx2hEGkimedGto=
+go.uber.org/goleak v1.3.0/go.mod h1:CoHD4mav9JJNrW/WLlf7HGZPjdw8EucARQHekz1X6bE=
 golang.org/x/net v0.0.0-20201224014010-6772e930b67b/go.mod h1:m0MpNAwzfU5UDzcl9v0D8zg8gWTRqZa9RBIspLL5mdg=
 golang.org/x/sys v0.0.0-20190606203320-7fc4e5ec1444/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20191026070338-33540a1f6037/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
