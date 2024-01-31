@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/johnsonjh/leaktestfe v0.0.0-20231214001306-c40b7f1b6028
-	github.com/opencontainers/runc v1.1.11
+	github.com/opencontainers/runc v1.1.12
 	github.com/pkg/errors v0.9.2-0.20201214064552-5dd12d0cfe7f
 	github.com/sirupsen/logrus v1.9.3
 	github.com/stretchr/testify v1.8.4
