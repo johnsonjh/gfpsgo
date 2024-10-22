@@ -1,10 +1,12 @@
 module github.com/johnsonjh/gfpsgo
 
-go 1.19
+go 1.22
+
+toolchain go1.23.2
 
 require (
 	github.com/johnsonjh/leaktestfe v0.0.0-20241007205320-ac5d8b1ce345
-	github.com/opencontainers/runc v1.1.15
+	github.com/opencontainers/runc v1.2.0
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.9.3
 	github.com/stretchr/testify v1.9.0
@@ -14,6 +16,7 @@ require (
 require (
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/kr/pretty v0.3.1 // indirect
+	github.com/moby/sys/user v0.3.0 // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/rogpeppe/go-internal v1.9.1-0.20230209130841-f0583b8402aa // indirect
 	go.uber.org/goleak v1.3.0 // indirect
