@@ -1,8 +1,8 @@
 module github.com/johnsonjh/gfpsgo
 
-go 1.22
+go 1.23.0
 
-toolchain go1.24.0
+toolchain go1.24.1
 
 require (
 	github.com/johnsonjh/leaktestfe v0.0.0-20241023172206-258a63d8b8de
@@ -10,7 +10,7 @@ require (
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.9.3
 	github.com/stretchr/testify v1.10.0
-	golang.org/x/sys v0.30.0
+	golang.org/x/sys v0.31.0
 )
 
 require (
