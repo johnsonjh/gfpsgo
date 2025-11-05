@@ -6,7 +6,7 @@ toolchain go1.25.3
 
 require (
 	github.com/johnsonjh/leaktestfe v0.0.0-20251007233924-fb086958f6db
-	github.com/opencontainers/runc v1.3.2
+	github.com/opencontainers/runc v1.3.3
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.9.3
 	github.com/stretchr/testify v1.11.1
