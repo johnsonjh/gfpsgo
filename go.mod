@@ -5,7 +5,7 @@ go 1.24.0
 toolchain go1.25.4
 
 require (
-	github.com/johnsonjh/leaktestfe v0.0.0-20251117235440-7eea55524afe
+	github.com/johnsonjh/leaktestfe v0.0.0-20251120185724-66e1ee2eb4f8
 	github.com/opencontainers/runc v1.3.3
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.9.3
