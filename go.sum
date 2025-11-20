@@ -27,6 +27,8 @@ github.com/johnsonjh/leaktestfe v0.0.0-20251007233924-fb086958f6db h1:0ICREfIqEE
 github.com/johnsonjh/leaktestfe v0.0.0-20251007233924-fb086958f6db/go.mod h1:L1ATWvdIpazWSpShKalXkYj7Mu1R/5LlmwJ8pLq3ZXw=
 github.com/johnsonjh/leaktestfe v0.0.0-20251117235440-7eea55524afe h1:WFQ4TMXIzOFh15uT7OdhArtl/v0ABYhggQgUETklo1I=
 github.com/johnsonjh/leaktestfe v0.0.0-20251117235440-7eea55524afe/go.mod h1:L1ATWvdIpazWSpShKalXkYj7Mu1R/5LlmwJ8pLq3ZXw=
+github.com/johnsonjh/leaktestfe v0.0.0-20251120185724-66e1ee2eb4f8 h1:19+bzBacYGGVfO319CfY5ZXrYdpb2TGGVg3OZN3yhV0=
+github.com/johnsonjh/leaktestfe v0.0.0-20251120185724-66e1ee2eb4f8/go.mod h1:L1ATWvdIpazWSpShKalXkYj7Mu1R/5LlmwJ8pLq3ZXw=
 github.com/kr/pretty v0.2.1/go.mod h1:ipq/a2n7PKx3OHsz4KJII5eveXtPO4qwEXGdVfWzfnI=
 github.com/kr/pretty v0.3.1 h1:flRD4NNwYAUpkphVc1HcthR4KEIFJ65n8Mw5qdRn3LE=
 github.com/kr/pretty v0.3.1/go.mod h1:hoEshYVHaxMs3cyo3Yncou5ZscifuDolrwPKZanG3xk=
