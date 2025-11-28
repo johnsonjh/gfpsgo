@@ -22,7 +22,7 @@ import (
 
 	"github.com/johnsonjh/gfpsgo/internal/host"
 	"github.com/johnsonjh/gfpsgo/internal/proc"
-	"github.com/opencontainers/runc/libcontainer/user"
+	"github.com/moby/sys/user"
 	"github.com/pkg/errors"
 )
 

@@ -6,7 +6,7 @@ toolchain go1.25.4
 
 require (
 	github.com/johnsonjh/leaktestfe v0.0.0-20251120185724-66e1ee2eb4f8
-	github.com/opencontainers/runc v1.4.0
+	github.com/moby/sys/user v0.4.0
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.9.3
 	github.com/stretchr/testify v1.11.1
@@ -16,10 +16,9 @@ require (
 require (
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/kr/pretty v0.3.1 // indirect
-	github.com/moby/sys/user v0.3.0 // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
-	github.com/rogpeppe/go-internal v1.9.1-0.20230209130841-f0583b8402aa // indirect
-	go.uber.org/goleak v1.3.0 // indirect
+	github.com/rogpeppe/go-internal v1.14.2-0.20250410113622-5223effb3133 // indirect
+	go.uber.org/goleak v1.3.1-0.20241121203838-4ff5fa6529ee // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
