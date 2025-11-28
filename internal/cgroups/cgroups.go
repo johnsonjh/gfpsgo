@@ -1,4 +1,4 @@
-// Copyright 2021 Jeffrey H. Johnson <trnsz@pobox.com>
+// Copyright 2021 Jeffrey H. Johnson
 // Copyright 2019 psgo authors
 //
 // Licensed under the Apache License, Version 2.0 (the "License");

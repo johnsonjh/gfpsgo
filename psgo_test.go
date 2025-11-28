@@ -1,4 +1,4 @@
-// Copyright 2021 Jeffrey H. Johnson <trnsz@pobox.com>
+// Copyright 2021 Jeffrey H. Johnson
 // Copyright 2018 psgo authors.
 // Copyright 2021 Gridfinity, LLC.
 //

@@ -1,4 +1,4 @@
-// Copyright 2021 Jeffery H. Johnson <trnsz@pobox.com>
+// Copyright 2021 Jeffery H. Johnson
 // Copyright 2021 Gridfinity, LLC.
 // Copyright 2020 The psgo authors.
 //
@@ -23,7 +23,6 @@
 // output nearly impossible to parse. It also adds some jitter as we have to
 // fork and execute ps either in the container or filter the output
 // afterwards, further limiting applicability.
-//
 package gfpsgo // import "github.com/johnsonjh/gfpsgo"
 
 import (
