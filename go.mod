@@ -2,7 +2,7 @@ module github.com/johnsonjh/gfpsgo
 
 go 1.25.0
 
-toolchain go1.26.1
+toolchain go1.26.2
 
 require (
 	github.com/johnsonjh/leaktestfe v0.0.0-20260216172522-69cfa8f3e74a
