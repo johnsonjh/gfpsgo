@@ -6,7 +6,7 @@ toolchain go1.26.4
 
 require (
 	github.com/johnsonjh/leaktestfe v0.0.0-20260618215256-bba490c5ab22
-	github.com/moby/sys/user v0.4.0
+	github.com/moby/sys/user v0.4.1
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.9.4
 	github.com/stretchr/testify v1.11.1
