@@ -5,7 +5,7 @@ go 1.25.0
 toolchain go1.26.5
 
 require (
-	github.com/johnsonjh/leaktestfe v0.0.0-20260618215256-bba490c5ab22
+	github.com/johnsonjh/leaktestfe v0.0.0-20260721001822-48e166aad86e
 	github.com/moby/sys/user v0.4.1
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.9.4
