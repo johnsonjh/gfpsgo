@@ -8,7 +8,7 @@ require (
 	github.com/johnsonjh/leaktestfe v0.0.0-20260721001822-48e166aad86e
 	github.com/moby/sys/user v0.4.1
 	github.com/pkg/errors v0.9.1
-	github.com/sirupsen/logrus v1.9.4
+	github.com/sirupsen/logrus v1.10.0
 	github.com/stretchr/testify v1.11.1
 	golang.org/x/sys v0.47.0
 )
