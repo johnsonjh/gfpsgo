@@ -9,7 +9,7 @@ require (
 	github.com/moby/sys/user v0.4.1
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.10.0
-	github.com/stretchr/testify v1.11.1
+	github.com/stretchr/testify v1.12.0
 	golang.org/x/sys v0.47.0
 )
 
